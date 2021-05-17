@@ -1,0 +1,658 @@
+/* 文字hover颜色: rgb(240, 110, 151);*/
+/* 主题颜色: rgb(241, 22, 90);*/
+
+/* 搜索页面样式 */
+.search-bg {
+  display: none;
+  width: 100%;
+  margin: 60px auto;
+  z-index: -1;
+}
+
+.search-bg > img {
+  width: 100%;
+  height: 100%;
+}
+
+.search {
+  position: relative;
+  display: none;
+  top: -228px;
+  width: 1350px;
+  height: 256px;
+  margin: 0 auto;
+}
+
+.search-bar {
+  position: absolute;
+  top: 32px;
+  left: 275px;
+  width: 800px;
+  height: 48px;
+  margin-left: 32px;
+  padding: 6px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.search-bar > i {
+  position: absolute;
+  bottom: 16px;
+  left: -32px;
+  height: 100%;
+  margin-right: 16px;
+  font-size: 32px;
+  color: rgb(107, 107, 107);
+  line-height: 70px;
+}
+
+.search-bar-txt {
+  position: absolute;
+  top: 6px;
+  right: 0;
+  width: 800px;
+  height: 48px;
+  padding-left: 4px;
+  font-size: 16px;
+  color: black;
+  line-height: 48px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.search-bar-btn {
+  position: absolute;
+  display: flex;
+  top: 6px;
+  right: 16px;
+  width: 24px;
+  height: 48px;
+  color: rgb(240, 110, 151);
+  background: #fff;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-bar-btn > i {
+  font-size: 32px;
+}
+
+.hot-search {
+  position: absolute;
+  top: 108px;
+  width: 100%;
+  height: 32px;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(207, 207, 207);
+}
+
+.hot-search > p {
+  display: inline-block;
+  padding: 0 16px;
+  font-weight: normal;
+  color: rgb(233, 233, 233);
+  cursor: pointer;
+}
+
+.hot-search > p:hover {
+  color: rgb(240, 110, 151);
+}
+
+.search-title {
+  position: absolute;
+  top: 188px;
+  width: 100%;
+  height: 64px;
+}
+
+.search-title > div {
+  display: inline-block;
+  height: 64px;
+  margin: 0 16px;
+  font-size: 24px;
+  line-height: 64px;
+  font-weight: bold;
+}
+
+.search-title > div:not(:nth-child(1)) {
+  position: relative;
+  font-size: 16px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.search-title > div:not(:nth-child(1)) > span {
+  position: absolute;
+  display: none;
+  bottom: 24px;
+  width: 100%;
+  height: 8px;
+  background-color: rgba(255, 70, 128, 0.4);
+}
+
+.search-title > div:not(:nth-child(1)):hover {
+  color: rgb(241, 22, 90);
+}
+
+.search-songs-page {
+  position: absolute;
+  display: block;
+  top: 256px;
+  width: 100%;
+  height: 512px;
+}
+
+.search-songs-btn {
+  position: relative;
+  width: 100%;
+  height: 32px;
+}
+
+.search-songs-btn > div {
+  position: absolute;
+  right: 0;
+  width: 100px;
+  height: 32px;
+  margin: 0 16px;
+  color: #fff;
+  text-align: center;
+  line-height: 32px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: rgb(241, 22, 90);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.search-songs-btn > div > i {
+  font-size: 14px;
+}
+
+.search-songs-page .spinner {
+  position: absolute;
+  display: block;
+  top: 128px;
+}
+
+.search-songs-page > ul {
+  position: absolute;
+  display: none;
+  top: 124px;
+  width: 100%;
+  height: auto;
+}
+
+.search-songs-page > ul > span {
+  display: block;
+  width: 100%;
+  height: 60px;
+}
+
+.search-songs-page > ul > li {
+  width: 100%;
+  height: 60px;
+  list-style: none;
+  background-color: #fff;
+}
+
+.search-songs-page > ul > li:nth-child(2n) {
+  background-color: rgb(247, 247, 247);
+}
+
+.search-songs-page > ul > li > div {
+  display: inline-block;
+  height: 100%;
+  line-height: 60px;
+  color: #494949;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.search-songs-page > ul > li > div:nth-child(1) {
+  box-sizing: border-box;
+  width: 400px;
+  padding-left: 16px;
+}
+
+.search-songs-page > ul > li > div:nth-child(2) {
+  width: 370px;
+}
+
+.search-songs-page > ul > li > div:nth-child(3) {
+  width: 420px;
+}
+
+.search-songs-page > ul > li > div:nth-child(4) {
+  box-sizing: border-box;
+  width: 140px;
+}
+
+.search-songs-page > ul > li > div > a {
+  position: relative;
+  font-size: 14px;
+  line-height: 60px;
+}
+
+.search-songs-page > ul > li > div:nth-child(4) > a {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 70%;
+  padding-left: 16px;
+}
+
+.search-songs-page > ul > li > div:nth-child(4) > i {
+  display: inline-block;
+  width: 30%;
+  text-align: right;
+}
+
+.search-songs-page > ul > li > div:nth-child(4) > i:hover {
+  color: rgb(241, 22, 90);
+  cursor: pointer;
+}
+
+.search-songs-page > ul > li > div:nth-child(1) > i:nth-child(3) {
+  display: inline-block;
+  height: 100%;
+  margin-left: 12px;
+  font-size: 16px;
+  line-height: 60px;
+}
+
+.search-songs-page > ul > li > div:nth-child(1) > i:nth-child(4) {
+  display: none;
+  float: right;
+  height: 100%;
+  margin-right: 48px;
+  font-size: 16px;
+  line-height: 60px;
+  cursor: pointer;
+}
+
+.search-songs-page > ul > li > div:nth-child(1) > i:nth-child(5) {
+  display: none;
+  float: right;
+  height: 100%;
+  margin-right: 16px;
+  font-size: 18px;
+  line-height: 60px;
+  cursor: pointer;
+}
+
+.search-songs-page > ul > li > div:nth-child(1):hover i:nth-child(4) {
+  display: inline-block;
+}
+
+.search-songs-page > ul > li > div:nth-child(1):hover i:nth-child(5) {
+  display: inline-block;
+}
+
+.search-songs-page > ul > li > div > i:hover {
+  color: rgb(88, 175, 16);
+  cursor: pointer;
+}
+
+.search-songs-page > ul > li > div:not(:nth-child(4)) > a:hover {
+  color: rgb(241, 22, 90);
+  cursor: pointer;
+}
+
+.search-songs-page > ul > li:nth-child(2n) {
+  background-color: rgb(247, 247, 247);
+}
+
+.songs-page-title {
+  position: absolute;
+  top: 64px;
+  width: 100%;
+  height: 60px;
+  background-color: rgb(247, 247, 247);
+  list-style: none;
+  z-index: 1;
+}
+
+.search-songs-page > .songs-page-title > div {
+  display: inline-block;
+  color: rgb(70, 70, 70);
+  font-weight: bold;
+  line-height: 60px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.search-songs-page > .songs-page-title > div > i {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.search-songs-page > .songs-page-title > div:nth-child(1) > i:hover {
+  color: rgb(241, 22, 90);
+  cursor: pointer;
+}
+
+.search-songs-page > .songs-page-title > div:nth-child(1) {
+  box-sizing: border-box;
+  width: 400px;
+  padding-left: 16px;
+}
+
+.search-songs-page > .songs-page-title > div:nth-child(2) {
+  width: 370px;
+}
+
+.search-songs-page > .songs-page-title > div:nth-child(3) {
+  width: 420px;
+}
+
+.search-songs-page > .songs-page-title > div:nth-child(4) {
+  box-sizing: border-box;
+  width: 140px;
+}
+
+.search-songs-page > .songs-page-title > div > i:hover {
+  color: rgb(88, 175, 16);
+  cursor: pointer;
+}
+
+/*  */
+.search-singers-page {
+  position: absolute;
+  display: none;
+  top: 256px;
+  width: 100%;
+  height: 512px;
+}
+
+.search-singers-page .spinner {
+  position: absolute;
+  display: block;
+  top: 96px;
+}
+
+.search-singers-page > ul {
+  position: absolute;
+  display: block;
+  top: 64px;
+  width: 100%;
+  height: auto;
+}
+
+.search-singers-page > ul > li {
+  float: left;
+  box-sizing: border-box;
+  width: 103px;
+  height: 135px;
+  margin: 0 16px;
+  list-style: none;
+}
+
+.search-singers-page > ul > li > img {
+  width: 103px;
+  height: 103px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.search-singers-page > ul > li > p {
+  width: 103px;
+  height: 32px;
+  font-size: 14px;
+  line-height: 32px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.search-singers-page > ul > li > p:hover {
+  color: rgb(240, 110, 151);
+  cursor: pointer;
+}
+
+/*  */
+.search-MV-page {
+  position: absolute;
+  display: none;
+  top: 256px;
+  width: 100%;
+  height: 512px;
+}
+
+.search-MV-page .spinner {
+  position: absolute;
+  display: block;
+  top: 96px;
+}
+
+.search-MV-page > ul {
+  position: absolute;
+  display: block;
+  top: 64px;
+  width: 100%;
+  height: auto;
+}
+
+.search-MV-page > ul > li {
+  float: left;
+  box-sizing: border-box;
+  width: 273.5px;
+  height: 185.5px;
+  margin: 16px 32px;
+  list-style: none;
+}
+
+.search-MV-page > ul > li > div {
+  position: relative;
+  width: 273.5px;
+  height: 153.5px;
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.search-MV-page > ul > li > div > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  transform: scale(1);
+  transition: transform 0.6s;
+}
+
+.search-MV-page > ul > li > div > span {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+
+.search-MV-page > ul > li > div > i {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  color: rgb(240, 110, 151);
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: all 0.6s;
+}
+
+.search-MV-page > ul > li > div > p {
+  position: absolute;
+  box-sizing: border-box;
+  bottom: 0;
+  width: 100%;
+  height: 24px;
+  padding-right: 16px;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: right;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.search-MV-page > ul > li > div > a {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  height: 16px;
+  padding: 4px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+.search-MV-page > ul > li > div:hover i {
+  width: 48px;
+  height: 48px;
+  font-size: 26px;
+  line-height: 48px;
+  opacity: 1;
+  transition: all 0.6s;
+}
+
+.search-MV-page > ul > li > div:hover img {
+  transform: scale(1.1);
+  transition: transform 0.6s;
+}
+
+.search-MV-page > ul > li > div:hover span {
+  opacity: 0.3;
+  transition: opacity 0.6s;
+}
+
+.search-MV-page > ul > li > p {
+  width: 100%;
+  height: 32px;
+  font-size: 14px;
+  line-height: 32px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.search-MV-page > ul > li > p:hover {
+  color: rgb(240, 110, 151);
+  cursor: pointer;
+}
+
+/*  */
+.search-lists-page {
+  position: absolute;
+  display: none;
+  top: 256px;
+  width: 100%;
+  height: 512px;
+}
+
+.search-lists-page .spinner {
+  position: absolute;
+  display: block;
+  top: 96px;
+}
+
+.search-lists-page > ul {
+  position: absolute;
+  display: block;
+  top: 64px;
+  width: 100%;
+  height: auto;
+}
+
+.search-lists-page > ul > li {
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+  width: 177px;
+  height: 209px;
+  margin: 16px 24px;
+  list-style: none;
+}
+
+.search-lists-page > ul > li > img {
+  width: 177px;
+  height: 177px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.search-lists-page > ul > li > p {
+  width: 177px;
+  height: 32px;
+  font-size: 14px;
+  line-height: 32px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.search-lists-page > ul > li > span {
+  position: absolute;
+  display: block;
+  top: 8px;
+  right: 8px;
+  height: 16px;
+  padding: 4px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+.search-lists-page > ul > li > span > i {
+  font-size: 10px;
+}
+
+.search-lists-page > ul > li > p:hover {
+  color: rgb(240, 110, 151);
+  cursor: pointer;
+}
+
+.search-singers-page > ul .end {
+  float: left;
+  width: 100%;
+  height: 128px;
+}
+
+.search-MV-page > ul .end {
+  float: left;
+  width: 100%;
+  height: 128px;
+}
+
+.search-lists-page > ul .end {
+  float: left;
+  width: 100%;
+  height: 128px;
+}
+/* 搜索页面样式end */

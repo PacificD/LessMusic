@@ -1,0 +1,1314 @@
+/* 文字hover颜色: rgb(240, 110, 151);*/
+/* 主题颜色: rgb(241, 22, 90);*/
+
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(49, 49, 49);
+}
+
+/* back返回上一级样式 */
+.back {
+  position: fixed;
+  top: 12%;
+  left: 2%;
+  z-index: 1;
+}
+
+.back > div {
+  display: flex;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 6px;
+  font-size: 32px;
+  font-weight: bolder;
+  color: rgb(101, 103, 107);
+  background-color: rgba(153, 174, 188, 0.3);
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color, color 0.4s;
+}
+
+.back > div:hover {
+  color: #fff;
+  background-color: rgb(240, 110, 151);
+}
+/* back返回上一级样式end */
+
+/* backTop返回顶部样式 */
+.back-top {
+  position: fixed;
+  top: 64%;
+  right: 2%;
+  z-index: 6;
+}
+
+.back-top > div {
+  display: flex;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 6px;
+  font-size: 32px;
+  font-weight: bolder;
+  color: rgb(101, 103, 107);
+  background-color: rgba(153, 174, 188, 0.3);
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  cursor: pointer;
+  transform: rotate(90deg);
+  transition: background-color, color 0.4s;
+}
+
+.back-top > div:hover {
+  color: #fff;
+  background-color: rgb(240, 110, 151);
+}
+
+.back-top > p {
+  display: flex;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 6px;
+  font-size: 32px;
+  font-weight: bolder;
+  color: rgb(101, 103, 107);
+  background-color: rgba(153, 174, 188, 0.3);
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color, color 0.4s;
+}
+
+.back-top > p:hover {
+  color: #fff;
+  background-color: rgb(240, 110, 151);
+}
+/* backTop返回顶部样式end */
+
+/* nav样式 */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #fff;
+  box-shadow: 0 1px 32px rgba(128, 128, 128, 0.2);
+  z-index: 10;
+}
+
+.nav-container {
+  width: 1350px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.nav-container .logo {
+  position: relative;
+  float: left;
+  width: 48px;
+  height: 100%;
+  margin-right: 16px;
+}
+
+.nav-container .logo > img {
+  position: absolute;
+  display: block;
+  top: 50%;
+  width: 48px;
+  height: 48px;
+  transform: translate(0, -50%);
+  cursor: pointer;
+}
+
+.nav-container > p {
+  float: left;
+  height: 70px;
+  margin-right: 64px;
+  font-size: 24px;
+  font-weight: bolder;
+  font-family: "FuturaBT-Medium";
+  letter-spacing: 3px;
+  line-height: 70px;
+  text-shadow: 2px 2px 4px rgba(128, 128, 128, 0.6);
+  cursor: pointer;
+}
+
+.nav-container > ul {
+  float: left;
+  height: 70px;
+}
+
+.nav-container > ul > li {
+  position: relative;
+  display: inline-block;
+  height: 70px;
+  margin-right: 32px;
+  color: rgb(107, 107, 107);
+  text-align: right;
+  font-weight: bold;
+  line-height: 70px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.nav-container > ul > li:hover {
+  color: rgb(240, 110, 151);
+}
+
+.nav-container > ul > li > span {
+  position: absolute;
+  display: none;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: rgb(241, 22, 90);
+}
+
+.nav-container .login {
+  display: block;
+  float: right;
+  height: 100%;
+}
+
+.nav-container .login i {
+  display: inline-block;
+  height: 100%;
+  margin-right: 8px;
+  font-weight: bold;
+  color: rgb(107, 107, 107);
+  line-height: 70px;
+}
+
+.nav-container .login p {
+  display: inline-block;
+  height: 100%;
+  font-weight: bold;
+  color: rgb(107, 107, 107);
+  line-height: 70px;
+  cursor: pointer;
+}
+
+.nav-container .login p:hover {
+  color: rgb(240, 110, 151);
+}
+
+.nav-container .user {
+  position: relative;
+  display: none;
+  float: right;
+  width: 280px;
+  height: 100%;
+}
+
+.nav-container .user > p {
+  float: right;
+  width: 160px;
+  height: 100%;
+  margin-right: 16px;
+  font-size: 14px;
+  text-align: right;
+  font-weight: bold;
+  line-height: 70px;
+  color: rgb(41, 21, 27);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.nav-container .user > p:hover {
+  color: rgb(241, 22, 90);
+}
+
+.nav-container .user .user-head {
+  float: right;
+  width: 48px;
+  height: 48px;
+  margin: 12px 16px 0 0;
+  border-radius: 50%;
+  box-shadow: 1px 1px 8px rgba(128, 128, 128, 0.3);
+}
+
+.nav-container .user > a {
+  float: right;
+  height: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: right;
+  color: rgb(41, 21, 27);
+  line-height: 70px;
+  cursor: pointer;
+}
+
+.nav-container .user > a:hover {
+  color: rgb(241, 22, 90);
+}
+
+.nav-container .user .user-head > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.search-box {
+  position: relative;
+  float: left;
+  top: 16px;
+  width: 200px;
+  height: 24px;
+  margin-left: 32px;
+  padding: 6px;
+  background: #2f3640;
+  border-radius: 32px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.search-box > i {
+  position: absolute;
+  bottom: 16px;
+  left: -32px;
+  height: 100%;
+  margin-right: 16px;
+  font-size: 24px;
+  color: rgb(107, 107, 107);
+  line-height: 70px;
+}
+
+.search-txt {
+  position: absolute;
+  top: 6px;
+  right: 0;
+  width: 200px;
+  height: 24px;
+  padding-left: 4px;
+  font-size: 12px;
+  color: white;
+  line-height: 24px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.search-btn {
+  position: absolute;
+  display: flex;
+  top: 6px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  color: rgb(241, 22, 90);
+  background: #2f3640;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-btn > i {
+  font-size: 18px;
+}
+
+.search-content {
+  position: absolute;
+  display: none;
+  box-sizing: border-box;
+  top: 42px;
+  right: 445px;
+  width: 212px;
+  height: auto;
+  padding: 16px 0;
+  z-index: 10;
+}
+
+.search-content > span {
+  display: block;
+  width: 100%;
+  height: 64px;
+}
+
+.search-hot {
+  width: 100%;
+  background: #2f3640;
+  border-radius: 8px;
+}
+
+.search-hot > p {
+  box-sizing: border-box;
+  width: 100%;
+  height: 24px;
+  padding-left: 24px;
+  font-size: 14px;
+  color: rgb(214, 214, 214);
+  line-height: 24px;
+  font-weight: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.search-hot > p:hover {
+  background-color: rgb(240, 110, 151);
+  cursor: pointer;
+}
+
+.search-hot > span {
+  display: block;
+  width: 100%;
+  height: 8px;
+}
+
+.search-result-songs {
+  width: 100%;
+  background: #2f3640;
+  border-radius: 8px 8px 0 0;
+}
+
+.search-result-songs > span {
+  display: block;
+  width: 100%;
+  height: 8px;
+}
+
+.search-result-songs > div {
+  box-sizing: border-box;
+  width: 100%;
+  height: 32px;
+  padding-left: 16px;
+  color: rgb(161, 161, 161);
+  line-height: 32px;
+  font-weight: normal;
+}
+
+.search-result-songs > p {
+  box-sizing: border-box;
+  width: 100%;
+  height: 24px;
+  padding-left: 24px;
+  font-size: 14px;
+  color: rgb(214, 214, 214);
+  line-height: 24px;
+  font-weight: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.search-result-songs > p:hover {
+  background-color: rgb(240, 110, 151);
+  cursor: pointer;
+}
+
+.search-result-singers {
+  width: 100%;
+  background: #2f3640;
+}
+
+.search-result-singers > div {
+  box-sizing: border-box;
+  width: 100%;
+  height: 32px;
+  padding-left: 16px;
+  color: rgb(161, 161, 161);
+  line-height: 32px;
+  font-weight: normal;
+}
+
+.search-result-singers > p {
+  box-sizing: border-box;
+  width: 100%;
+  height: 24px;
+  padding-left: 24px;
+  font-size: 14px;
+  color: rgb(214, 214, 214);
+  line-height: 24px;
+  font-weight: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.search-result-singers > p:hover {
+  background-color: rgb(240, 110, 151);
+  cursor: pointer;
+}
+
+.search-result-lists {
+  width: 100%;
+  background: #2f3640;
+  border-radius: 0 0 8px 8px;
+}
+
+.search-result-lists > div {
+  box-sizing: border-box;
+  width: 100%;
+  height: 32px;
+  padding-left: 16px;
+  color: rgb(161, 161, 161);
+  line-height: 32px;
+  font-weight: normal;
+}
+
+.search-result-lists > p {
+  box-sizing: border-box;
+  width: 100%;
+  height: 24px;
+  padding-left: 24px;
+  font-size: 14px;
+  color: rgb(214, 214, 214);
+  line-height: 24px;
+  font-weight: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.search-result-lists > p:hover {
+  background-color: rgb(240, 110, 151);
+  cursor: pointer;
+}
+
+.search-result-lists > span {
+  display: block;
+  width: 100%;
+  height: 16px;
+}
+/* nav样式end */
+
+/* music-nav样式 */
+.music-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.music-progress {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 5px;
+  background-color: rgba(228, 231, 237, 0.8);
+}
+
+.music-progress > p {
+  position: absolute;
+  top: 0;
+  width: 0%;
+  height: 5px;
+  background-color: rgba(240, 110, 151, 0.6);
+  z-index: 1;
+}
+
+.music-progress .music-progress-btn {
+  position: absolute;
+  top: -4px;
+  left: 0%;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(235, 28, 93);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.music-logo {
+  position: relative;
+  float: left;
+  width: 47px;
+  height: 47px;
+  margin: 8px 0 0 96px;
+  border-radius: 8px;
+}
+
+.music-logo > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.music-logo > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.2);
+  border-radius: 8px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.music-logo > div > i:nth-child(1) {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 0;
+  font-size: 28px;
+  color: #fff;
+  transform: rotate(135deg);
+}
+
+.music-logo > div > i:nth-child(2) {
+  position: absolute;
+  display: none;
+  bottom: 0;
+  left: 0;
+  font-size: 28px;
+  color: #fff;
+  transform: rotate(-45deg);
+}
+
+.music-logo > div:hover i {
+  display: inline-block;
+}
+
+.music-info {
+  position: relative;
+  float: left;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 60px;
+  margin-left: 16px;
+  overflow: hidden;
+}
+
+.music-info .music-name {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: auto;
+  height: 40px;
+  font-size: 18px;
+  line-height: 40px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  user-select: text;
+}
+
+.music-ar {
+  position: absolute;
+  bottom: 4px;
+  left: 16px;
+  width: 100%;
+  height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.music-ar > a {
+  display: inline-block;
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.music-ar > a:hover {
+  color: rgb(241, 22, 90);
+  user-select: text;
+}
+
+.music-icon {
+  position: absolute;
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  width: 210px;
+  height: 60px;
+  padding-top: 12px;
+  transform: translate(-50%, -50%);
+}
+
+.music-icon > i {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin: 0 16px;
+  border: 1px solid rgb(240, 110, 151);
+  border-radius: 50%;
+  color: rgb(240, 110, 151);
+  line-height: 32px;
+  text-align: center;
+  box-shadow: 1px 1px 6px rgba(128, 128, 128, 0.4);
+  cursor: pointer;
+}
+
+.music-icon > i:hover {
+  color: rgb(241, 22, 90);
+  border: 1px solid rgb(241, 22, 90);
+}
+
+.music-time {
+  float: right;
+  width: 136px;
+  height: 60px;
+  margin-right: 8px;
+}
+
+.music-time > p {
+  display: inline;
+  width: 60px;
+  height: 60px;
+  font-size: 14px;
+  line-height: 60px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.music-time > li {
+  display: inline;
+  width: 16px;
+  height: 60px;
+  font-size: 14px;
+  line-height: 60px;
+}
+
+.music-time > div {
+  display: inline;
+  width: 60px;
+  height: 60px;
+  font-size: 14px;
+  line-height: 60px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.music-sound {
+  position: relative;
+  float: right;
+  width: 188px;
+  height: 60px;
+  margin: 0 86px 0 0;
+}
+
+.music-sound > i {
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 60px;
+  font-size: 20px;
+  line-height: 60px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.music-sound > i:hover {
+  color: rgb(240, 110, 151);
+}
+
+.music-sound > div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 60px;
+}
+
+.music-sound > div > p {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 5px;
+  background-color: rgb(233, 236, 241);
+  transform: translate(0, -50%);
+}
+
+.music-sound > div > div {
+  position: absolute;
+  top: 50%;
+  width: 20%;
+  height: 5px;
+  background-color: rgb(240, 110, 151);
+  transform: translate(0, -50%);
+  z-index: 1;
+}
+
+.music-sound > div > .music-sound-btn {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(235, 28, 93);
+  border-radius: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.music-nav > i {
+  float: right;
+  display: inline-block;
+  width: 32px;
+  height: 60px;
+  margin-right: 8px;
+  font-size: 20px;
+  line-height: 60px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.music-nav > i:hover {
+  color: rgb(241, 22, 90);
+}
+
+.music-nav > p {
+  float: right;
+  display: inline-block;
+  width: 126px;
+  height: 60px;
+  margin-right: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(31, 31, 31, 0.7);
+  line-height: 60px;
+  text-align: center;
+}
+
+.music-nav > p > i:nth-child(2):hover {
+  color: rgb(241, 22, 90);
+  cursor: pointer;
+}
+/* music-nav样式end */
+
+/* music-list音乐播放列表样式 */
+.music-list {
+  position: absolute;
+  top: -540px;
+  right: -460px; /* -460px隐藏 */
+  width: 450px;
+  height: 520px;
+  background-color: #fff;
+  overflow-y: scroll;
+  box-shadow: 2px 2px 16px rgba(128, 128, 128, 0.4);
+  transition: right 1s;
+}
+
+.music-list-show {
+  right: 0;
+  transition: right 1s;
+}
+
+.music-list::-webkit-scrollbar {
+  display: none;
+}
+
+.music-list > div {
+  position: fixed;
+  box-sizing: border-box;
+  width: 100%;
+  height: 48px;
+  padding: 16px 16px;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(128, 128, 128, 0.35);
+  z-index: 1;
+  cursor: e-resize;
+}
+
+.music-list > div > p {
+  display: inline-block;
+  float: left;
+  color: rgb(56, 56, 56);
+}
+
+.music-list > div > i {
+  display: inline-block;
+  float: left;
+  margin-left: 338px;
+  color: rgb(56, 56, 56);
+  cursor: pointer;
+}
+
+.music-list > div > i:hover {
+  color: rgb(241, 22, 90);
+}
+
+.music-list > ul {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.music-list > ul > li {
+  display: grid;
+  box-sizing: border-box;
+  width: 100%;
+  height: 36px;
+  padding: 0 4px 0 16px;
+  font-size: 14px;
+  color: rgb(56, 56, 56);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 36px;
+  background-color: #fff;
+  grid-template-columns: 36px 154px 150px 48px 30px;
+  cursor: pointer;
+}
+
+.music-list > ul > li:nth-child(2n-1) {
+  background-color: rgb(247, 247, 247);
+}
+
+.music-list ul > li > a {
+  display: inline-block;
+  height: 100%;
+  font-size: 12px;
+  line-height: 36px;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.music-list ul > li > a:nth-child(2) {
+  text-align: center;
+}
+
+.music-list ul > li > a:nth-child(4) {
+  text-align: right;
+}
+
+.music-list ul > li > a:nth-child(5) {
+  text-align: right;
+}
+
+.music-list ul > li:hover > a {
+  color: rgb(240, 110, 151);
+}
+
+.music-list ul > li > a:nth-child(5):hover {
+  color: rgb(106, 173, 50);
+}
+
+.music-list ul .music-list-play > a {
+  color: rgb(241, 22, 90);
+}
+/* music-list音乐播放列表样式end */
+
+/* music页面样式 */
+.music {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 100%; /* 100%时隐藏 */
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 6;
+  background: linear-gradient(75deg, #292e49, #536976, #292e49);
+}
+
+/* .music > img {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  filter: blur(65px);
+} */
+
+.music > div:nth-child(2) {
+  position: absolute;
+  box-sizing: border-box;
+  top: 13%;
+  left: 16px;
+  width: 32%;
+  height: 48px;
+  padding-left: 16px;
+  font-size: 20px;
+  line-height: 48px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #495c68;
+  border-radius: 10px 10px 0 0;
+  z-index: 3;
+}
+
+.music-comment {
+  position: absolute;
+  top: 13%;
+  left: 16px;
+  width: 32%;
+  height: 76%;
+  border-radius: 10px;
+  overflow: scroll;
+}
+
+.music-comment::-webkit-scrollbar {
+  display: none;
+}
+
+.music-comment > ul {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 0 16px 0 16px;
+  top: 8%;
+  width: 100%;
+  height: auto;
+}
+
+.music-comment > ul > li {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  padding: 8px 0 32px 0;
+  list-style: none;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.3);
+}
+
+.music-comment > ul > li .comment-logo {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-right: 8px;
+}
+
+.music-comment > ul > li .comment-logo > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.music-comment > ul > li .comment-content .comment-name {
+  display: inline;
+  font-size: 13px;
+  color: #488dd8;
+  font-weight: bold;
+}
+
+.music-comment > ul > li .comment-content > span {
+  display: inline;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.music-comment > ul > li > span {
+  position: absolute;
+  bottom: 8px;
+  left: 60px;
+  font-size: 12px;
+  color: rgb(174, 174, 174);
+}
+
+.music-comment > ul > li > i {
+  position: absolute;
+  bottom: 8px;
+  right: 0;
+  font-size: 12px;
+  color: rgba(199, 87, 144, 0.8);
+  font-weight: bold;
+}
+
+.music-CD {
+  position: absolute;
+  top: 14%;
+  left: 38%;
+}
+
+.music-CD > img:nth-child(1) {
+  position: absolute;
+  top: -16px;
+  right: -320px;
+  width: 101px;
+  width: 135px;
+  transform: rotate(-25deg);
+  z-index: 4;
+}
+
+.music-CD > img:nth-child(2) {
+  position: absolute;
+  top: 72px;
+  width: 340px;
+  height: 340px;
+  z-index: 3;
+}
+
+.music-CD > img:nth-child(3) {
+  position: absolute;
+  top: 144px;
+  left: 76px;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+}
+
+.rotate {
+  /* 旋转CSS类，音乐播放时添加 */
+  animation: rot 10s linear infinite;
+}
+
+@keyframes rot {
+  /* 设置关键帧 */
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.music .music-name {
+  position: absolute;
+  top: 16%;
+  right: 1%;
+  width: 512px;
+  height: 32px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 32px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.music .music-name a {
+  color: rgba(89, 163, 241, 0.84);
+}
+
+.music .singer {
+  position: absolute;
+  top: 21%;
+  right: 1%;
+  width: 512px;
+  height: 26px;
+  font-size: 13px;
+  line-height: 26px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.music .singer a {
+  color: rgba(89, 163, 241, 0.7);
+}
+
+.music-lyric {
+  position: absolute;
+  top: 26%;
+  right: 1%;
+  width: 512px;
+  height: 60%;
+  overflow: scroll;
+}
+
+.music-lyric::-webkit-scrollbar {
+  display: none;
+}
+
+.lyric-content {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.lyric-content > p {
+  width: 100%;
+  height: 32px;
+  font-size: 14px;
+  color: rgb(238, 135, 168);
+  line-height: 32px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* music页面样式end */
+
+/* 登录模块login-content样式 */
+.login-content {
+  position: absolute;
+  display: none;
+  top: 96px;
+  left: 50%;
+  width: 350px;
+  height: 400px;
+  padding: 0 25px;
+  background: linear-gradient(#86fde8, #acb6e5);
+  border-radius: 16px;
+  box-shadow: 3px 3px 16px rgba(128, 128, 128, 0.4);
+  transform: translate(-50%, 0);
+  z-index: 12;
+}
+
+.login-title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 48px;
+  background-color: transparent;
+  cursor: move;
+}
+
+.login-content > img {
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  width: 64px;
+  height: 64px;
+  transform: translate(-50%, 0);
+}
+
+.login-content > p {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  font-size: 24px;
+  font-weight: bolder;
+  font-family: "FuturaBT-Medium";
+  letter-spacing: 3px;
+  line-height: 70px;
+  text-shadow: 2px 2px 4px rgba(128, 128, 128, 0.6);
+  transform: translate(-50%, 0);
+}
+
+.login-username {
+  position: absolute;
+  box-sizing: border-box;
+  top: 160px;
+  left: 50%;
+  width: 300px;
+  height: 40px;
+  padding: 0 36px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  transform: translate(-50%, 0);
+}
+
+.login-phone {
+  position: absolute;
+  display: block;
+  top: 170px;
+  left: 58px;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(87, 87, 87);
+  z-index: 2;
+}
+
+.login-password {
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  top: 230px;
+  left: 50%;
+  width: 300px;
+  height: 40px;
+  padding: 0 36px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  transform: translate(-50%, 0);
+}
+
+.login-code {
+  position: absolute;
+  display: block;
+  top: 238px;
+  left: 58px;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(87, 87, 87);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.login-code:hover {
+  color: rgb(241, 22, 90);
+}
+
+.login-btn {
+  position: absolute;
+  bottom: 48px;
+  left: 50%;
+  width: 300px;
+  height: 40px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  font-weight: bold;
+  background-color: rgb(241, 22, 90);
+  border-radius: 8px;
+  transform: translate(-50%, 0);
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  color: rgb(118, 187, 61);
+  background-color: rgb(201, 55, 101);
+  transition: all 0.4s;
+}
+
+.login-close {
+  position: absolute;
+  top: 12px;
+  right: 36px;
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.login-close:hover {
+  color: rgb(240, 110, 151);
+}
+
+.phone-wrong {
+  position: absolute;
+  display: none;
+  top: 51%;
+  left: 50px;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(241, 22, 90);
+}
+
+.password-wrong {
+  position: absolute;
+  display: none;
+  top: 70%;
+  left: 50px;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(241, 22, 90);
+}
+/* 登录模块login-cotent样式 */

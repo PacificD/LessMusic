@@ -1,0 +1,598 @@
+/* 文字hover颜色: rgb(240, 110, 151);*/
+/* 主题颜色: rgb(241, 22, 90);*/
+
+/* 歌手页面样式 */
+.singer-page-container {
+  position: relative;
+  display: none;
+  top: 102px;
+  width: 1350px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.singer-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 950px;
+  height: auto;
+  margin-right: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 3px 4px 16px rgba(128, 128, 128, 0.4);
+}
+
+.singer-page .avatar {
+  float: left;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.singer-page .info {
+  float: right;
+  width: 720px;
+  height: 206px;
+}
+
+.singer-page .info > h1 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  font-family: FuturaBT-Medium;
+}
+
+.singer-page .info > p {
+  display: -webkit-box;
+  margin-top: 8px;
+  line-height: 1.6;
+  font-weight: 400;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 4; /*限制在一个块元素显示的文本的行数。*/
+  -webkit-box-orient: vertical; /*子元素排列: 竖排*/
+}
+
+.singer-page .info > .singerInfo-more {
+  position: relative;
+  float: right;
+  width: 460px;
+  height: 400px;
+  margin-right: 8px;
+}
+
+.singer-page .info > .singerInfo-more > a {
+  float: right;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.singer-page .info > .singerInfo-more > a:hover {
+  color: rgb(240, 110, 151);
+}
+
+.singer-page .info > .singerInfo-more > div {
+  display: none;
+  position: absolute;
+  box-sizing: border-box;
+  top: 32px;
+  right: 0;
+  width: 460px;
+  height: 380px;
+  padding: 16px;
+  background-color: #fff;
+  filter: drop-shadow(2px 6px 8px rgba(0, 0, 0, 0.2));
+  border-radius: 8px;
+  overflow: scroll;
+  z-index: 1;
+}
+
+.singer-page .info > .singerInfo-more > div::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: #f5f5f5;
+}
+
+.singer-page .info > .singerInfo-more > div::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+.singer-page .info > .singerInfo-more > div::-webkit-scrollbar-thumb {
+  background-color: rgb(128, 128, 128);
+  border-radius: 8px;
+}
+
+.singer-page .info > .singerInfo-more > h1 {
+  display: none;
+  position: absolute;
+  box-sizing: border-box;
+  top: 32px;
+  right: 20px;
+  width: 440px;
+  height: 16px;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.singer-page .info > .singerInfo-more > h2 {
+  display: none;
+  position: absolute;
+  box-sizing: border-box;
+  top: 396px;
+  right: 0;
+  width: 460px;
+  height: 16px;
+  background-color: #fff;
+}
+
+.singer-page .info > .singerInfo-more > p {
+  display: none;
+  position: absolute;
+  top: 14px;
+  right: 8px;
+  width: 0;
+  height: 0;
+  border: solid transparent;
+  border-width: 10px;
+  border-bottom-color: #fff;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+  content: " ";
+}
+
+.singer-page .info > h2 {
+  width: 100%;
+  margin-top: 8px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.singer-page .info .singer-btn {
+  position: relative;
+  width: 100%;
+  height: 32px;
+  margin: 16px 0;
+}
+
+.singer-page .info .singer-btn > div {
+  position: absolute;
+  right: 0;
+  width: 100px;
+  height: 32px;
+  margin: 0 16px;
+  color: #fff;
+  text-align: center;
+  line-height: 32px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: rgb(241, 22, 90);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.singer-page .info .singer-btn > div > i {
+  font-size: 14px;
+}
+
+.singer-page > P {
+  float: left;
+  box-sizing: border-box;
+  width: 100%;
+  height: 32px;
+  margin: 16px 0;
+  padding-left: 16px;
+  font-size: 20px;
+  line-height: 32px;
+  color: rgb(77, 77, 77);
+  font-weight: bold;
+}
+
+.singer-page > ul {
+  float: left;
+  display: none;
+  width: 100%;
+  height: auto;
+  overflow: scroll;
+}
+
+.singer-page > ul::-webkit-scrollbar {
+  display: none;
+}
+
+.singer-page > ul > li {
+  display: grid;
+  width: 950px;
+  height: 60px;
+  background-color: #fff;
+  list-style: none;
+  grid-template-columns: 360px 300px 220px 70px;
+}
+
+.singer-page > ul > li:nth-child(2n) {
+  background-color: rgb(247, 247, 247);
+}
+
+.singer-page > .singer-page-title {
+  float: left;
+  display: grid;
+  width: 950px;
+  height: 60px;
+  color: rgb(94, 94, 94);
+  background-color: rgb(250, 250, 250);
+  list-style: none;
+  grid-template-columns: 360px 300px 220px 70px;
+  z-index: 1;
+}
+
+.singer-page > .singer-page-title > div {
+  line-height: 60px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.singer-page > ul > li > div {
+  line-height: 60px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.singer-page > ul > li > div:nth-child(1) {
+  box-sizing: border-box;
+  width: 360px;
+  padding-left: 16px;
+}
+
+.singer-page > ul > li > div:nth-child(2) {
+  width: 300px;
+}
+
+.singer-page > ul > li > div:nth-child(3) {
+  width: 220px;
+}
+
+.singer-page > ul > li > div:nth-child(4) {
+  box-sizing: border-box;
+  width: 70px;
+}
+
+.singer-page > ul > li > div > a {
+  position: relative;
+  font-size: 14px;
+  line-height: 60px;
+}
+
+.singer-page > ul > li > div:nth-child(4) > a {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 70%;
+  padding-left: 16px;
+}
+
+.singer-page > ul > li > div:nth-child(4) > i {
+  display: inline-block;
+  width: 30%;
+  text-align: right;
+}
+
+.singer-page > ul > li > div:nth-child(4) > i:hover {
+  color: rgb(241, 22, 90);
+  cursor: pointer;
+}
+
+.singer-page > ul > li > div:nth-child(1) > i:nth-child(3) {
+  display: inline-block;
+  height: 100%;
+  margin-left: 12px;
+  font-size: 16px;
+  line-height: 60px;
+}
+
+.singer-page > ul > li > div:nth-child(1) > i:nth-child(4) {
+  display: none;
+  float: right;
+  height: 100%;
+  margin-right: 48px;
+  font-size: 16px;
+  line-height: 60px;
+  cursor: pointer;
+}
+
+.singer-page > ul > li > div:nth-child(1) > i:nth-child(5) {
+  display: none;
+  float: right;
+  height: 100%;
+  margin-right: 16px;
+  font-size: 18px;
+  line-height: 60px;
+  cursor: pointer;
+}
+
+.singer-page > ul > li > div:nth-child(1):hover i:nth-child(4) {
+  display: inline-block;
+}
+
+.singer-page > ul > li > div:nth-child(1):hover i:nth-child(5) {
+  display: inline-block;
+}
+
+.singer-page > ul > li > div > i:hover {
+  color: rgb(88, 175, 16);
+  cursor: pointer;
+}
+
+.singer-page > ul > li > div:not(:nth-child(4)) > a:hover {
+  color: rgb(241, 22, 90);
+  cursor: pointer;
+}
+
+.space0 {
+  float: left;
+  width: 900px;
+  height: 64px;
+}
+
+.relevant-singer {
+  float: right;
+  width: 345px;
+  height: 464px;
+  box-shadow: 3px 4px 16px rgba(128, 128, 128, 0.4);
+  background-color: #fff;
+}
+
+.relevant-singer-title {
+  width: 100%;
+  height: 32px;
+  margin: 16px 0;
+  line-height: 32px;
+}
+
+.relevant-singer-title > div {
+  display: inline-block;
+  width: 5px;
+  height: 100%;
+  margin-left: 16px;
+  background-color: rgb(240, 110, 151);
+}
+
+.relevant-singer-title > p {
+  display: inline-block;
+  height: 100%;
+  font-weight: bold;
+  color: rgb(70, 70, 70);
+  line-height: 32px;
+  transform: translate(24px, -8px);
+}
+
+.relevant-singer > ul {
+  width: 100%;
+  height: auto;
+}
+
+.relevant-singer > ul > li {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 16px;
+  list-style-type: none;
+}
+
+.relevant-singer > ul > li .relevant-singer-img {
+  position: absolute;
+  top: 0;
+  left: 16px;
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+}
+
+.relevant-singer > ul > li .relevant-singer-img > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.relevant-singer > ul > li > p {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  width: 252px;
+  height: 16px;
+  font-size: 14px;
+  color: #4a4a4a;
+  font-weight: bold;
+  line-height: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.relevant-singer > ul > li > p:hover {
+  color: rgb(240, 110, 151);
+  cursor: pointer;
+}
+
+.relevant-singer > ul > li > div {
+  position: absolute;
+  bottom: 8px;
+  right: 0;
+  width: 252px;
+  height: 16px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #9d9db3;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.singer-MV {
+  float: right;
+  width: 345px;
+  height: auto;
+  margin-left: 700px;
+  margin-top: 32px;
+  background-color: #fff;
+  box-shadow: 3px 4px 16px rgba(128, 128, 128, 0.4);
+}
+
+.singer-MV-title {
+  width: 100%;
+  height: 32px;
+  margin: 16px 0;
+  line-height: 32px;
+}
+
+.singer-MV-title > div {
+  display: inline-block;
+  width: 5px;
+  height: 100%;
+  margin-left: 16px;
+  background-color: rgb(240, 110, 151);
+}
+
+.singer-MV-title > p {
+  display: inline-block;
+  height: 100%;
+  font-weight: bold;
+  color: rgb(70, 70, 70);
+  line-height: 32px;
+  transform: translate(24px, -8px);
+}
+
+.singer-MV > ul {
+  width: 100%;
+  height: auto;
+}
+
+.singer-MV > ul > li {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 16px;
+  list-style-type: none;
+}
+
+.singer-MV > ul > li .singer-MV-img {
+  position: absolute;
+  top: 0;
+  left: 16px;
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+}
+
+.singer-MV > ul > li .singer-MV-img > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.singer-MV > ul > li .singer-MV-img > span {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+
+.singer-MV > ul > li .singer-MV-img > i {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+  color: rgb(240, 110, 151);
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: all 0.6s;
+}
+
+.singer-MV > ul > li .singer-MV-img:hover img {
+  transform: scale(1.1);
+  transition: transform 0.6s;
+}
+
+.singer-MV > ul > li .singer-MV-img:hover span {
+  opacity: 0.3;
+  transition: opacity 0.6s;
+}
+
+.singer-MV > ul > li .singer-MV-img:hover i {
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  line-height: 32px;
+  opacity: 1;
+  transition: all 0.6s;
+}
+
+.singer-MV > ul > li > p {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  width: 252px;
+  height: 16px;
+  font-size: 14px;
+  color: #4a4a4a;
+  font-weight: bold;
+  line-height: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.singer-MV > ul > li > p:hover {
+  color: rgb(240, 110, 151);
+  cursor: pointer;
+}
+
+.singer-MV > ul > li > div {
+  position: absolute;
+  bottom: 8px;
+  right: 0;
+  width: 252px;
+  height: 16px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #9d9db3;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.singer-MV-more {
+  display: block;
+  width: 100%;
+  height: 24px;
+  margin: 8px 0;
+  line-height: 24px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: #4a4a4a;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.singer-MV-more:hover {
+  color: rgb(240, 110, 151);
+}
+/* 歌手页面样式end */

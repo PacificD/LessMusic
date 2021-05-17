@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LessMusic</title>
+    <link rel="shortcut icon" href="../icon/yinle.png">
+    <!-- 引用自定义字体 -->
+    <!-- font-family:'FuturaBT-Medium'; -->
+    <link href='http://cdn.repository.webfont.com/webfonts/nomal/144305/47008/6079580bf629d8f0947593a2.css'
+        rel='stylesheet' type='text/css' />
+    <!-- font-family:'Edo-SZ'; -->
+    <link href='http://cdn.repository.webfont.com/webfonts/nomal/144305/47808/607adfd7f629d8cce4aac96a.css'
+        rel='stylesheet' type='text/css' />
+    <!-- 引入CSS文件 -->
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/personal.css">
+    <link rel="stylesheet" href="../css/musicList.css">
+    <link rel="stylesheet" href="../css/singer.css">
+    <link rel="stylesheet" href="../css/search.css">
+</head>
+
+<body>
+    <!-- back -->
+    <div class="back">
+        <div>
+            <i class="iconfont">&#xe660;</i>
+        </div>
+    </div>
+    <!-- backTop -->
+    <div class="back-top">
+        <div>
+            <i class="iconfont">&#xe660;</i>
+        </div>
+        <p>
+            <i class="iconfont">&#xe686;</i>
+        </p>
+        <p>
+            <i class="iconfont">&#xe601;</i>
+        </p>
+        <p>
+            <i class="iconfont">&#xec3b;</i>
+        </p>
+    </div>
+    <!-- nav -->
+    <div class="nav">
+        <div class="nav-container">
+            <div class="logo">
+                <img class="LessMusic-logo" src="../icon/yinleguangpan.png" alt="">
+            </div>
+            <p class="LessMusic">LessMusic</p>
+            <ul>
+                <li class="to-main">发现音乐<span class="nav-underline"></span></li>
+                <li class="to-personal">个人主页<span class="nav-underline"></span></li>
+                <li class="to-rank">排行榜<span class="nav-underline"></span></li>
+                <li class="to-singer-rank">歌手<span class="nav-underline"></span></li>
+                <li class="to-playlist-rank">歌单<span class="nav-underline"></span></li>
+                <li class="to-MV-rank">MV<span class="nav-underline"></span></li>
+            </ul>
+            <div class="login">
+                <i class="iconfont">&#xe679;</i>
+                <p>登录</p>
+            </div>
+            <div class="user">
+                <a>登出</a>
+                <div class="user-head">
+                    <img class="user-head-img" src="" alt="">
+                </div>
+                <p class="user-name"><i class="iconfont">&#xe679;</i>&nbsp;&nbsp;&nbsp;小苹果Pacific_D</p>
+            </div>
+            <div class="search-box">
+                <i class="iconfont">&#xe61f;</i>
+                <input class="search-txt" type="text" placeholder="请输入关键词(歌名/歌手/MV)">
+                <a class="search-btn">
+                    <i class="iconfont">&#xe611;</i>
+                </a>
+            </div>
+            <div class="search-content">
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- main -->
+    <div class="main" data-mode='main'>
+        <!-- 背景 -->
+        <div class="main-bg">
+            <img src="../icon/yinle.png" alt="">
+        </div>
+        <div class="dum">
+            <img src="../img/dum.png" alt="">
+        </div>
+        <!-- 轮播图 -->
+        <div class="carousel">
+            <i class="iconfont arrow-next">&#xec3c;</i>
+            <i class="iconfont arrow-prev">&#xe660;</i>
+            <div class="carousel-show"><img src="../img/banner.jpg" alt=""></div>
+            <div><img src="" alt=""></div>
+            <div><img src="" alt=""></div>
+            <div><img src="" alt=""></div>
+            <div><img src="" alt=""></div>
+            <div><img src="" alt=""></div>
+            <div><img src="" alt=""></div>
+            <div><img src="" alt=""></div>
+            <div><img src="" alt=""></div>
+            <div><img src="../img/banner.jpg" alt=""></div>
+            <ol class="circle"></ol>
+        </div>
+        <!-- 推荐新歌 -->
+        <div class="recommend-newest">
+            <p>推荐新歌</p>
+            <div>
+                <div>
+                    <P>1.</P>
+                    <div class="newest-img">
+                        <img src="../img/preview.jpg" alt="">
+                    </div>
+                    <div class="newest-info">
+                        <div class="newest-name">Mood (Lil Ghost Remix)</div>
+                        <p>24kGoldn / ian</p>
+                    </div>
+                    <div class="newest-btn">
+                        <i class="iconfont">&#xe664;</i>
+                    </div>
+                </div>
+                <div>
+                    <P>2.</P>
+                    <div class="newest-img">
+                        <img src="../img/preview.jpg" alt="">
+                    </div>
+                    <div class="newest-info">
+                        <div class="newest-name">Mood (Lil Ghost Remix)</div>
+                        <p>24kGoldn / ian</p>
+                    </div>
+                    <div class="newest-btn">
+                        <i class="iconfont">&#xe664;</i>
+                    </div>
+                </div>
+                <div>
+                    <P>3.</P>
+                    <div class="newest-img">
+                        <img src="../img/preview.jpg" alt="">
+                    </div>
+                    <div class="newest-info">
+                        <div class="newest-name">Mood (Lil Ghost Remix)</div>
+                        <p>24kGoldn / ian</p>
+                    </div>
+                    <div class="newest-btn">
+                        <i class="iconfont">&#xe664;</i>
+                    </div>
+                </div>
+                <div>
+                    <P>4.</P>
+                    <div class="newest-img">
+                        <img src="../img/preview.jpg" alt="">
+                    </div>
+                    <div class="newest-info">
+                        <div class="newest-name">Mood (Lil Ghost Remix)</div>
+                        <p>24kGoldn / ian</p>
+                    </div>
+                    <div class="newest-btn">
+                        <i class="iconfont">&#xe664;</i>
+                    </div>
+                </div>
+                <div>
+                    <P>5.</P>
+                    <div class="newest-img">
+                        <img src="../img/preview.jpg" alt="">
+                    </div>
+                    <div class="newest-info">
+                        <div class="newest-name">Mood (Lil Ghost Remix)</div>
+                        <p>24kGoldn / ian</p>
+                    </div>
+                    <div class="newest-btn">
+                        <i class="iconfont">&#xe664;</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 歌单推荐 -->
+        <div class="spinner1">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+        <div class="recommend-list">
+            <p>歌单推荐</p>
+            <i class="iconfont recommend-list-prev">&#xe660;</i>
+            <i class="iconfont recommend-list-next">&#xec3c;</i>
+            <ul>
+            </ul>
+            <ol>
+                <li class="recommend-list-current"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>
+    </div>
+    <!-- personal -->
+    <div class="personal">
+        <div class=personal-bg>
+            <img src="../img/d5d.png" alt="">
+        </div>
+        <div class="personal-head" data-personalMode='0'>
+            <img src="" alt="">
+            <div class='personal-name'>
+                <i class="iconfont">&#xe7ab;</i>nickname<a>LV.0</a>
+            </div>
+            <div class='personal-follow'>
+                <span>关注: 0 |</span>
+                <p> 粉丝: 0</p>
+            </div>
+            <p class='signature'>signature</p>
+        </div>
+        <ul>
+            <li class='personal-current'>我喜欢</li>
+            <li>我创建的歌单</li>
+            <li>我收藏的歌单</li>
+        </ul>
+        <!-- mylikes -->
+        <div class="mylikes">
+            <li class='mylikes-title'>
+                <div>歌曲
+                    <i class="iconfont mylikes-btn">&#xe61b;</i>
+                </div>
+                <div>歌手
+                    <i class="iconfont">&#xe679;</i>
+                </div>
+                <div>专辑
+                    <i class="iconfont">&#xe61f;</i>
+                </div>
+                <div>时长
+                    <i class="iconfont">&#xe627;</i>
+                </div>
+            </li>
+            <ul>
+
+            </ul>
+            <i class="iconfont mylikes-prev"></i>
+            <i class="iconfont mylikes-next"></i>
+        </div>
+        <!-- myPlayLists我的歌单 -->
+        <div class="myPlayLists">
+            <li class='myPlayLists-title'>
+                <div>歌单
+                    <i class="iconfont mylikes-btn">&#xe61b;</i>
+                </div>
+                <div>曲目数
+                    <i class="iconfont">&#xe61f;</i>
+                </div>
+                <div>创建人
+                    <i class="iconfont">&#xe679;</i>
+                </div>
+                <div>收听
+                    <i class="iconfont">&#xe81e;</i>
+                </div>
+            </li>
+            <ul>
+            </ul>
+        </div>
+        <!-- myCollect我收藏的歌单 -->
+        <div class="myCollect">
+            <li class='myCollect-title'>
+                <div>歌单
+                    <i class="iconfont mylikes-btn">&#xe61b;</i>
+                </div>
+                <div>曲目数
+                    <i class="iconfont">&#xe61f;</i>
+                </div>
+                <div>创建人
+                    <i class="iconfont">&#xe679;</i>
+                </div>
+                <div>收听
+                    <i class="iconfont">&#xe81e;</i>
+                </div>
+            </li>
+            <ul>
+            </ul>
+        </div>
+    </div>
+    <!-- music -->
+    <div class="music-nav">
+        <div class="music-progress">
+            <p></p>
+            <div class="music-progress-btn"></div>
+        </div>
+        <div class="music-logo">
+            <div>
+                <i class="iconfont">&#xec3d;</i>
+                <i class="iconfont">&#xec3d;</i>
+            </div>
+            <img src="" alt="">
+        </div>
+        <!-- 音乐信息 -->
+        <div class="music-info">
+            <div class="music-name">In the mood</div>
+            <div class="music-ar">
+                <a>Henri Pfr /</a>
+                <a> Romeo Blanco /</a>
+                <a> Henri Pfr</a>
+            </div>
+        </div>
+        <!-- 上一首/播放/下一首 -->
+        <div class="music-icon">
+            <i class="iconfont" id='music-prev'>&#xeca9;</i>
+            <i class="iconfont" id="music-play">&#xe638;</i>
+            <i class="iconfont" id='music-next'>&#xe603;</i>
+        </div>
+        <!-- 音乐声音 -->
+        <div class="music-sound">
+            <i class="iconfont music-sound-icon">&#xe610;</i>
+            <div>
+                <p></p>
+                <div></div>
+                <span class='music-sound-btn'></span>
+            </div>
+        </div>
+        <i class="iconfont">&#xe67b;</i>
+        <p>
+            <i class='music-mode-content'>列表循环&ensp;</i>
+            <i class="iconfont">&#xe6a1;</i>
+        </p>
+        <!-- 音乐进度 -->
+        <div class="music-time">
+            <p>0:00</p>
+            <li> / </li>
+            <div>0:00</div>
+        </div>
+        <!-- 音乐播放列表music-list -->
+        <div class="music-list">
+            <div>
+                <p>播放列表</p>
+                <i class="iconfont">&#xe615;</i>
+            </div>
+            <ul>
+            </ul>
+        </div>
+    </div>
+    <div class="music">
+        <img src="" alt="">
+        <div>热门评论</div>
+        <div class="music-comment">
+            <ul>
+            </ul>
+        </div>
+        <div class="music-CD">
+            <img class="down" src="../img/SF.png" id="sf" alt="">
+            <img src="../img/music.png" alt="">
+            <img class="music-CD-logo" src="" alt="">
+        </div>
+        <div class="music-name">
+            <a>In the mood</a>
+        </div>
+        <div class="singer">
+            <a>Romeo Blanco</a>
+            <a> / Henri Pfr</a>
+        </div>
+        <div class="music-lyric">
+            <div class="lyric-content">
+
+            </div>
+        </div>
+        <audio class=audio src="" muted autoplay>
+        </audio>
+    </div>
+    <!-- 登录模块login-content -->
+    <div class="login-content">
+        <img src="../icon/yinleguangpan.png" alt="">
+        <div class="login-title">
+            <div class="login-close">X</div>
+        </div>
+        <p>LessMusic</p>
+        <i class="iconfont login-phone">&#xe608;</i>
+        <input class='login-username' type="text" placeholder="请输入网易云音乐手机号" maxlength="11">
+        <i class="iconfont login-code">&#xe641;</i>
+        <input class='login-password' type="password" placeholder="请输入密码" maxlength="16">
+        <div class="login-btn">登录</div>
+        <div class="phone-wrong">账号不存在!</div>
+        <div class="password-wrong">密码错误!</div>
+    </div>
+    <!-- 歌单musicList -->
+    <div class="musicList-container" data-musicListMode="0">
+        <!-- musicList -->
+        <div class="musicList">
+            <img src="" alt="" class="avatar">
+            <div class="info">
+                <h1>LKS☛2021良/曲/安/利【拯救歌荒】12秒</h1>
+                <div>
+                    <img src="" alt="">
+                    <a>Astrotecer</a>
+                    <p>2021-02-21创建</p>
+                </div>
+                <div class="tag">
+                    标签:&nbsp;
+                </div>
+                <p>【 啦垮丝】2021 / 良 / 曲 / 安 / 利，拯救歌荒 @拉克丝@啦克丝@拉胯斯@LKS-
+                </p>
+            </div>
+            <div class="musicList-btn">
+                <div class="musicList-collect">
+                    <i class="iconfont">&#xe60a;&nbsp;收藏</i>
+                </div>
+                <div class="musicList-playAll">
+                    <i class="iconfont">&#xe68b;&nbsp;播放全部</i>
+                </div>
+            </div>
+            <div class="musicList-title">
+                <div>&emsp;歌曲
+                </div>
+                <div>歌手
+                </div>
+                <div>专辑
+                </div>
+                <div>&nbsp;时长</div>
+            </div>
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+            <ul>
+            </ul>
+            <div class="space0"></div>
+        </div>
+        <!-- 相关推荐 -->
+        <div class="relevant">
+            <div class="relevant-title">
+                <div></div>
+                <p>相关推荐</p>
+            </div>
+            <ul>
+                <li>
+                    <div class="relevant-img">
+                        <img src="" alt="">
+                    </div>
+                    <p class="relevant-name">空耳君的乐趣你们地球人是不会知道的</p>
+                    <div class="relevant-creator">
+                        By. olly的牙缝
+                    </div>
+                </li>
+                <li>
+                    <div class="relevant-img">
+                        <img src="" alt="">
+                    </div>
+                    <p class="relevant-name">空耳君的乐趣你们地球人是不会知道的</p>
+                    <div class="relevant-creator">
+                        By. olly的牙缝
+                    </div>
+                </li>
+                <li>
+                    <div class="relevant-img">
+                        <img src="" alt="">
+                    </div>
+                    <p class="relevant-name">空耳君的乐趣你们地球人是不会知道的</p>
+                    <div class="relevant-creator">
+                        By. olly的牙缝
+                    </div>
+                </li>
+                <li>
+                    <div class="relevant-img">
+                        <img src="" alt="">
+                    </div>
+                    <p class="relevant-name">空耳君的乐趣你们地球人是不会知道的</p>
+                    <div class="relevant-creator">
+                        By. olly的牙缝
+                    </div>
+                </li>
+                <li>
+                    <div class="relevant-img">
+                        <img src="" alt="">
+                    </div>
+                    <p class="relevant-name">空耳君的乐趣你们地球人是不会知道的</p>
+                    <div class="relevant-creator">
+                        By. olly的牙缝
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- 精彩评论 -->
+        <div class="musicList-comment">
+            <div class="musicList-comment-title">
+                <div></div>
+                <p>精彩评论</p>
+            </div>
+            <ul>
+                <li>
+                    <div class="musicList-comment-img">
+                        <img src="" alt="">
+                    </div>
+                    <div class="musicList-comment-info">
+                        <p>第六信</p>
+                        <a>四周前</a>
+                        <div>咖啡猫把我骗进来了[大哭]
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="send-musicList-comment">
+                <p>&emsp;发表评论</p>
+                <textarea name="" id="musicList-comment-input" placeholder="期待你的神评论……"></textarea>
+                <div>剩余字数: <a>140</a> </div>
+                <div class="send-comment">发送</div>
+            </div>
+        </div>
+        <div class="space"></div>
+    </div>
+    <!-- 歌手页面singer-page -->
+    <div class="singer-page-container">
+        <!-- singer-page -->
+        <div class="singer-page">
+            <img src="../img/preview.jpg" alt="" class="avatar">
+            <div class="info">
+                <h1>Billie Eilish</h1>
+                <p>Billie Eilish，美国歌手、词曲作家，被誉为全球超级新人。2016年，碧梨因她的首支单曲《Ocean Eyes》走红，她的第一张EP《don't smile at
+                    me》发行于2017年8月，随着这张EP的成功，碧梨在社交平台上的粉丝倍增。 她的首张录音室专辑《WHEN WE ALL FALL ASLEEP, WHERE DO WE
+                    GO?》发行于2019年3月29日，并以31.3万张的首周销量空降Billboard 200专辑榜冠军，主打单曲\"bad guy\"登顶Billboard Hot
+                    100单曲榜冠军。截至到2019年11月，这张专辑在美国累计197万灌水销量，全球灌水约为380万。美国唱片工业协会认证下，碧梨已累积了七首黄金单曲和两首白金单曲。2020年1月27日，第62届格莱美，Billie
+                    Eilish获得年度专辑、年度歌曲、年度制作、最佳新人、最佳流行专辑五项大奖成为最大赢家！同时碧梨也成为格莱美历史上最年轻的年度专辑获得者。
+                </p>
+                <div class="singerInfo-more">
+                    <a>[更多]</a>
+                    <div>
+                    </div>
+                    <h1></h1>
+                    <h2></h2>
+                    <p></p>
+                </div>
+                <h2>
+                    <a class="musicSize">歌曲 161</a>
+                    <span> | </span>
+                    <a class="albumSize">专辑 34</a>
+                    <span> | </span>
+                    <a class="mvSize">MV 102</a>
+                </h2>
+                <div class="singer-btn">
+                    <div>
+                        <i class="iconfont">&#xe68b;&nbsp;播放全部</i>
+                    </div>
+                </div>
+            </div>
+            <p>热门TOP50</p>
+            <div class="singer-page-title">
+                <div>&emsp;歌曲
+                </div>
+                <div>歌手
+                </div>
+                <div>专辑
+                </div>
+                <div>&nbsp;时长</div>
+            </div>
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+            <ul>
+            </ul>
+            <div class="space0"></div>
+        </div>
+        <!-- 相似歌手 -->
+        <div class="relevant-singer">
+            <div class="relevant-singer-title">
+                <div></div>
+                <p>相似歌手</p>
+            </div>
+            <ul>
+                <li id='singer'>
+                    <div class="relevant-singer-img">
+                        <img src="" alt="">
+                    </div>
+                    <p class="relevant-singer-name"></p>
+                    <div class="relevant-musicSize">
+
+                    </div>
+                </li>
+                <li id='singer'>
+                    <div class="relevant-singer-img">
+                        <img src="" alt="">
+                    </div>
+                    <p class="relevant-singer-name"></p>
+                    <div class="relevant-musicSize">
+
+                    </div>
+                </li>
+                <li id='singer'>
+                    <div class="relevant-singer-img">
+                        <img src="" alt="">
+                    </div>
+                    <p class="relevant-singer-name"></p>
+                    <div class="relevant-musicSize">
+
+                    </div>
+                </li>
+                <li id='singer'>
+                    <div class="relevant-singer-img">
+                        <img src="" alt="">
+                    </div>
+                    <p class="relevant-singer-name"></p>
+                    <div class="relevant-musicSize">
+
+                    </div>
+                </li>
+                <li id='singer'>
+                    <div class="relevant-singer-img">
+                        <img src="" alt="">
+                    </div>
+                    <p class="relevant-singer-name"></p>
+                    <div class="relevant-musicSize">
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- 歌手MV -->
+        <div class="singer-MV">
+            <div class="singer-MV-title">
+                <div></div>
+                <p>歌手MV</p>
+            </div>
+            <ul>
+            </ul>
+            <p class="singer-MV-more">加载更多</p>
+        </div>
+    </div>
+    <!-- 搜索页面search -->
+    <div class="search-bg">
+        <img src="../img/search-bg.jpg" alt="">
+    </div>
+    <div class="search">
+        <div class="search-bar">
+            <i class="iconfont">&#xe61f;</i>
+            <input class="search-bar-txt" type="text" placeholder="请输入关键词(歌名/歌手/MV/歌单)">
+            <a class="search-bar-btn">
+                <i class="iconfont">&#xe611;</i>
+            </a>
+        </div>
+        <div class="hot-search">热门搜索:
+        </div>
+        <div class="search-title">
+            <div>搜索结果:</div>
+            <div id="search-songs">
+                &ensp;单曲&ensp;
+                <span id='under-span'></span>
+            </div>
+            <div id="search-singer">
+                &ensp;歌手&ensp;
+                <span id='under-span'></span>
+            </div>
+            <div id="search-MV">
+                &ensp;MV&ensp;
+                <span id='under-span'></span>
+            </div>
+            <div id="search-lists">
+                &ensp;歌单&ensp;
+                <span id='under-span'></span>
+            </div>
+        </div>
+        <div class="search-songs-page">
+            <div class="search-songs-btn">
+                <div> <i class="iconfont">&#xe68b;&nbsp;播放全部</i></div>
+            </div>
+            <div class="songs-page-title">
+                <div>歌曲
+                    <i class="iconfont mylikes-btn">&#xe61b;</i>
+                </div>
+                <div>歌手
+                    <i class="iconfont">&#xe679;</i>
+                </div>
+                <div>专辑
+                    <i class="iconfont">&#xe61f;</i>
+                </div>
+                <div>时长
+                    <i class="iconfont">&#xe627;</i>
+                </div>
+            </div>
+            <ul></ul>
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+        </div>
+        <div class="search-singers-page">
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+            <ul>
+            </ul>
+        </div>
+        <div class="search-MV-page">
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+            <ul>
+            </ul>
+        </div>
+        <div class="search-lists-page">
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+            <ul>
+            </ul>
+        </div>
+    </div>
+
+    <script src='../script/ajax.js'></script>
+    <script src="../script/function.js"></script>
+    <script src='../script/nav.js'></script>
+    <script src="../script/music.js"></script>
+    <script src="../script/comment.js"></script>
+    <script src='../script/musicPlayFunction.js'></script>
+    <script src="../script/playList.js"></script>
+    <script src="../script/singer.js"></script>
+    <script src="../script/personal.js"></script>
+    <script src="../script/login.js"></script>
+    <script src="../script/main.js"></script>
+    <script src="../script/search.js"></script>
+    <script src="../script/onload.js"></script>
+</body>
+
+
+</html>
