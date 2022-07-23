@@ -1,0 +1,559 @@
+/* 文字hover颜色: rgb(240, 110, 151);*/
+/* 主题颜色: rgb(241, 22, 90);*/
+
+/* 主页样式 */
+.main {
+  position: relative;
+  display: block;
+  width: 1350px;
+  height: auto;
+  margin: 92px auto;
+}
+
+.main-bg {
+  position: absolute;
+  top: 375px;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  z-index: -1;
+  animation: movy 4s infinite;
+  -webkit-animation: movy 4s infinite;
+  animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes movy {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    right: 16px;
+    top: 380px;
+    transform: rotate(-15deg);
+    -webkit-transform: rotate(-15deg);
+  }
+}
+
+@keyframes movy {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    right: 16px;
+    top: 380px;
+    transform: rotate(-15deg);
+    -webkit-transform: rotate(-15deg);
+  }
+}
+
+.main-bg > img {
+  width: 100%;
+  height: 100%;
+}
+
+.dum {
+  position: fixed;
+  top: 68%;
+  left: 512px;
+  width: 100px;
+  height: 100px;
+  z-index: -1;
+  transform: rotate(15deg);
+}
+
+.dum > img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 轮播图样式 */
+.carousel {
+  position: relative;
+  width: 950px;
+  height: 352px;
+  overflow: hidden;
+}
+
+.arrow-next {
+  position: absolute;
+  display: none;
+  box-sizing: border-box;
+  top: 50%;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  padding: 4px 0 0 12px;
+  font-size: 28px;
+  line-height: 42px;
+  color: rgb(240, 110, 151);
+  background-color: rgba(123, 123, 123, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+  transform: translate(0, -50%);
+}
+
+.arrow-prev {
+  position: absolute;
+  display: none;
+  box-sizing: border-box;
+  top: 50%;
+  left: 20px;
+  width: 48px;
+  height: 48px;
+  padding: 4px 0 0 8px;
+  font-size: 28px;
+  line-height: 42px;
+  color: rgb(240, 110, 151);
+  background-color: rgba(123, 123, 123, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+  transform: translate(0, -50%);
+}
+
+.arrow-next:hover {
+  background-color: rgba(123, 123, 123, 0.6);
+}
+
+.arrow-prev:hover {
+  background-color: rgba(123, 123, 123, 0.6);
+}
+
+.carousel > div {
+  position: absolute;
+  opacity: 0; /* 轮播图全透明 */
+  top: 0;
+  left: 0;
+  width: 950px;
+  height: 352px;
+  cursor: pointer;
+  transition: opacity 3s; /* 添加过渡，实现淡入淡出效果 */
+}
+
+.carousel > div > img {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel .carousel-show {
+  opacity: 1;
+  transition: opacity 3s;
+}
+
+.carousel .circle {
+  position: absolute;
+  bottom: 2%;
+}
+
+.carousel .circle > li {
+  display: inline-block;
+  float: left;
+  width: 20px;
+  height: 6px;
+  margin-right: 6px;
+  background-color: rgba(123, 123, 123, 0.5);
+  border-radius: 40px;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.carousel .circle .current {
+  background-color: rgb(240, 110, 151);
+}
+/* 轮播图样式end */
+
+/* 推荐新歌样式 */
+.recommend-newest {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 368px;
+  height: 352px;
+}
+
+.recommend-newest > p {
+  width: 100%;
+  height: 24px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 24px;
+  color: rgb(66, 66, 66);
+}
+
+.recommend-newest > div {
+  display: grid;
+  width: 100%;
+  height: 328px;
+  grid-template-columns: 368px;
+  grid-template-rows: 59.2px 59.2px 59.2px 59.2px 59.2px;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.recommend-newest > div > div {
+  position: relative;
+  width: 320px;
+  height: 59.2px;
+  background-color: #fff;
+  border-radius: 24px 0 24px 0;
+  transition: all 0.6s ease-out;
+  box-shadow: 1px 2px 6px rgba(128, 128, 128, 0.3);
+}
+
+.recommend-newest > div > div > P {
+  display: inline-block;
+  width: 20px;
+  height: 100%;
+  font-size: 14px;
+  text-align: center;
+  line-height: 59.2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.recommend-newest > div > div .newest-img {
+  position: absolute;
+  top: 5.6px;
+  left: 20px;
+  width: 48px;
+  height: 48px;
+}
+
+.recommend-newest > div > div .newest-img > img {
+  width: 100%;
+  height: 100%;
+}
+
+.recommend-newest > div > div .newest-info {
+  position: absolute;
+  top: 0;
+  left: 76px;
+  width: 242px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.recommend-newest > div > div .newest-info > div {
+  width: 100%;
+  height: 32px;
+  font-size: 14px;
+  line-height: 32px;
+  font-weight: bold;
+  color: rgb(53, 53, 53);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.recommend-newest > div > div .newest-info > div:hover {
+  color: rgb(240, 110, 151);
+  cursor: pointer;
+}
+
+.recommend-newest > div > div .newest-info > p {
+  width: 226px;
+  height: 27px;
+  margin-left: 16px;
+  font-size: 12px;
+  line-height: 27px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.recommend-newest > div > div .newest-btn {
+  position: absolute;
+  top: 13.5px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  color: rgb(240, 110, 151);
+  background-color: #fff;
+  border: 2px solid rgb(240, 110, 151);
+  border-radius: 8px;
+  opacity: 0 /* 隐藏 */;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+
+.recommend-newest > div > div .newest-btn > i {
+  font-size: 16px;
+}
+
+.recommend-newest > div > div .newest-btn:hover {
+  color: rgb(241, 22, 90);
+  border: 2px solid rgb(241, 22, 90);
+}
+
+.recommend-newest > div > div:hover {
+  width: 368px;
+  transform: scale(1.01);
+  transition: all 0.6s ease-out;
+}
+
+.recommend-newest > div > div:hover .newest-btn {
+  opacity: 1;
+  transition: all 0.6s;
+}
+/* 推荐新歌样式end */
+
+/* 推荐歌单样式 */
+.spinner1 {
+  position: relative;
+  display: block;
+  top: 64px;
+  left: 50%;
+  width: 50px;
+  height: 60px;
+  text-align: center;
+  font-size: 10px;
+  transform: translate(-50%, 0);
+}
+
+.spinner1 > div {
+  background-color: rgb(240, 110, 151);
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+  animation: stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner1 .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner1 .rect3 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+.spinner1 .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner1 .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes stretchdelay {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+  }
+}
+
+@keyframes stretchdelay {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}
+
+.recommend-list {
+  position: relative;
+  display: none;
+  top: 64px;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.recommend-list > p {
+  width: 100%;
+  height: 48px;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 48px;
+  color: rgb(59, 59, 59);
+  text-align: center;
+}
+
+.recommend-list > i {
+  display: block;
+  width: 32px;
+  height: 32px;
+  font-size: 26px;
+  line-height: 32px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.6s;
+}
+
+.recommend-list > i:hover {
+  color: rgb(240, 110, 151);
+}
+
+.recommend-list .recommend-list-prev {
+  position: absolute;
+  top: 12px;
+  left: 562px;
+}
+
+.recommend-list .recommend-list-next {
+  position: absolute;
+  top: 12px;
+  right: 562px;
+}
+
+.recommend-list:hover i {
+  opacity: 1;
+  transition: all 0.6s;
+}
+
+.recommend-list > ul {
+  position: absolute;
+  left: 0px; /* 0,-1370,-2740,-4110 */
+  width: 5600px;
+  height: 300px;
+  margin-top: 32px;
+}
+
+.recommend-list > ul > li {
+  display: inline-block;
+  width: 250px;
+  height: 300px;
+  margin-right: 20px;
+  list-style: none;
+}
+
+.recommend-list > ul > li .recommend-list-img {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.recommend-list > ul > li .recommend-list-img > img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: transform 0.6s;
+}
+
+.recommend-list > ul > li .recommend-list-img > span {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+
+.recommend-list > ul > li .recommend-list-img > i {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  line-height: 48px;
+  text-align: center;
+  color: rgb(240, 110, 151);
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: all 0.6s;
+}
+
+.recommend-list > ul > li .recommend-list-img:hover i {
+  width: 64px;
+  height: 64px;
+  font-size: 32px;
+  line-height: 64px;
+  opacity: 1;
+  transition: all 0.6s;
+}
+
+.recommend-list > ul > li .recommend-list-img:hover img {
+  transform: scale(1.1);
+  transition: transform 0.6s;
+}
+
+.recommend-list > ul > li .recommend-list-img:hover span {
+  opacity: 0.3;
+  transition: opacity 0.6s;
+}
+
+.recommend-list > ul > li > div:nth-child(2) {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.recommend-list > ul > li > div:nth-child(2):hover {
+  color: rgb(240, 110, 151);
+  cursor: pointer;
+}
+
+.recommend-list > ul > li > p:nth-child(3) {
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  color: rgb(83, 83, 83);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.recommend-list > ol {
+  position: absolute;
+  left: 50%;
+  bottom: 96px;
+  width: auto;
+  height: 32px;
+  margin: 32px auto;
+  transform: translate(-50%, 0);
+}
+
+.recommend-list > ol > li {
+  display: inline-block;
+  float: left;
+  width: 20px;
+  height: 6px;
+  margin-right: 12px;
+  background-color: rgba(123, 123, 123, 0.5);
+  border-radius: 40px;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.recommend-list > ol .recommend-list-current {
+  background-color: rgb(240, 110, 151);
+}
+/* 推荐歌单样式end */
+
+/* 主页样式end */

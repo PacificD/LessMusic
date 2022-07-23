@@ -1,0 +1,599 @@
+/* 文字hover颜色: rgb(240, 110, 151);*/
+/* 主题颜色: rgb(241, 22, 90);*/
+
+/* 歌单页面样式 */
+.musicList-container {
+  position: relative;
+  display: none;
+  top: 102px;
+  width: 1350px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.musicList {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 950px;
+  height: auto;
+  margin-right: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 3px 4px 16px rgba(128, 128, 128, 0.4);
+}
+
+.musicList .avatar {
+  float: left;
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+}
+
+.musicList .info {
+  float: right;
+  width: 720px;
+  height: 206px;
+}
+
+.musicList .info > h1 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.musicList .info > div {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.musicList .info > div > img {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin-right: 8px;
+  border-radius: 50%;
+}
+
+.musicList .info > div > a {
+  display: inline-block;
+  margin-right: 32px;
+}
+
+.musicList .info > div > p {
+  display: inline-block;
+}
+
+.musicList .info .tag {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.musicList .info .tag > a {
+  display: inline-block;
+  color: #fff;
+  background: #fa2800;
+  margin-right: 15px;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 4px 12px;
+  border-radius: 15px;
+}
+
+.musicList .info > p {
+  display: -webkit-box;
+  line-height: 1.6;
+  font-weight: 400;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 2; /*限制在一个块元素显示的文本的行数。*/
+  -webkit-box-orient: vertical; /*子元素排列: 竖排*/
+}
+
+.musicList-btn {
+  float: left;
+  width: 100%;
+  height: 32px;
+  margin: 16px 0;
+}
+
+.musicList-btn > div {
+  float: right;
+  width: 76px;
+  height: 32px;
+  margin: 0 16px;
+  color: rgb(83, 83, 83);
+  text-align: center;
+  line-height: 32px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: rgb(242, 242, 242);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.musicList-btn > div:nth-child(2) {
+  width: 100px;
+  color: #fff;
+  background-color: rgb(241, 22, 90);
+}
+
+.musicList-btn > div > i {
+  font-size: 14px;
+}
+
+.spinner {
+  position: absolute;
+  display: block;
+  top: 420px;
+  left: 50%;
+  width: 50px;
+  height: 60px;
+  text-align: center;
+  font-size: 10px;
+  transform: translate(-50%, 0);
+}
+
+.spinner > div {
+  background-color: rgb(240, 110, 151);
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+
+  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+  animation: stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes stretchdelay {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+  }
+}
+
+@keyframes stretchdelay {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}
+
+.musicList > ul {
+  float: left;
+  display: none;
+  width: 100%;
+  height: auto;
+  overflow: scroll;
+}
+
+.musicList > ul::-webkit-scrollbar {
+  display: none;
+}
+
+.musicList > ul > li {
+  display: grid;
+  width: 950px;
+  height: 60px;
+  background-color: #fff;
+  list-style: none;
+  grid-template-columns: 360px 300px 220px 70px;
+}
+
+.musicList > ul > li:nth-child(2n) {
+  background-color: rgb(247, 247, 247);
+}
+
+.musicList > .musicList-title {
+  float: left;
+  display: grid;
+  width: 950px;
+  height: 60px;
+  color: rgb(94, 94, 94);
+  background-color: rgb(250, 250, 250);
+  list-style: none;
+  grid-template-columns: 360px 300px 220px 70px;
+  z-index: 1;
+}
+
+.musicList > .musicList-title > div {
+  line-height: 60px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.musicList > ul > li > div {
+  line-height: 60px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.musicList > ul > li > div:nth-child(1) {
+  box-sizing: border-box;
+  width: 360px;
+  padding-left: 16px;
+}
+
+.musicList > ul > li > div:nth-child(2) {
+  width: 300px;
+}
+
+.musicList > ul > li > div:nth-child(3) {
+  width: 220px;
+}
+
+.musicList > ul > li > div:nth-child(4) {
+  box-sizing: border-box;
+  width: 70px;
+}
+
+.musicList > ul > li > div > a {
+  position: relative;
+  font-size: 14px;
+  line-height: 60px;
+}
+
+.musicList > ul > li > div:nth-child(4) > a {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 70%;
+  padding-left: 16px;
+}
+
+.musicList > ul > li > div:nth-child(4) > i {
+  display: inline-block;
+  width: 30%;
+  text-align: right;
+}
+
+.musicList > ul > li > div:nth-child(4) > i:hover {
+  color: rgb(241, 22, 90);
+  cursor: pointer;
+}
+
+.musicList > ul > li > div:nth-child(1) > i:nth-child(3) {
+  display: inline-block;
+  height: 100%;
+  margin-left: 12px;
+  font-size: 16px;
+  line-height: 60px;
+}
+
+.musicList > ul > li > div:nth-child(1) > i:nth-child(4) {
+  display: none;
+  float: right;
+  height: 100%;
+  margin-right: 48px;
+  font-size: 16px;
+  line-height: 60px;
+  cursor: pointer;
+}
+
+.musicList > ul > li > div:nth-child(1) > i:nth-child(5) {
+  display: none;
+  float: right;
+  height: 100%;
+  margin-right: 16px;
+  font-size: 18px;
+  line-height: 60px;
+  cursor: pointer;
+}
+
+.musicList > ul > li > div:nth-child(1):hover i:nth-child(4) {
+  display: inline-block;
+}
+
+.musicList > ul > li > div:nth-child(1):hover i:nth-child(5) {
+  display: inline-block;
+}
+
+.musicList > ul > li > div > i:hover {
+  color: rgb(88, 175, 16);
+  cursor: pointer;
+}
+
+.musicList > ul > li > div:not(:nth-child(4)) > a:hover {
+  color: rgb(241, 22, 90);
+  cursor: pointer;
+}
+
+.space0 {
+  float: left;
+  width: 900px;
+  height: 64px;
+}
+
+.relevant {
+  float: right;
+  width: 345px;
+  height: 464px;
+  box-shadow: 3px 4px 16px rgba(128, 128, 128, 0.4);
+  background-color: #fff;
+}
+
+.relevant-title {
+  width: 100%;
+  height: 32px;
+  margin: 16px 0;
+  line-height: 32px;
+}
+
+.relevant-title > div {
+  display: inline-block;
+  width: 5px;
+  height: 100%;
+  margin-left: 16px;
+  background-color: rgb(240, 110, 151);
+}
+
+.relevant-title > p {
+  display: inline-block;
+  height: 100%;
+  font-weight: bold;
+  color: rgb(70, 70, 70);
+  line-height: 32px;
+  transform: translate(24px, -8px);
+}
+
+.relevant > ul {
+  width: 100%;
+  height: auto;
+}
+
+.relevant > ul > li {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 16px;
+  list-style-type: none;
+}
+
+.relevant > ul > li .relevant-img {
+  position: absolute;
+  top: 0;
+  left: 16px;
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+}
+
+.relevant > ul > li .relevant-img > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.relevant > ul > li > p {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  width: 252px;
+  height: 16px;
+  font-size: 14px;
+  color: #4a4a4a;
+  font-weight: bold;
+  line-height: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.relevant > ul > li > p:hover {
+  color: rgb(240, 110, 151);
+  cursor: pointer;
+}
+
+.relevant > ul > li > div {
+  position: absolute;
+  bottom: 8px;
+  right: 0;
+  width: 252px;
+  height: 16px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #9d9db3;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.musicList-comment {
+  float: right;
+  width: 345px;
+  height: auto;
+  margin-left: 700px;
+  margin-top: 32px;
+  background-color: #fff;
+  box-shadow: 3px 4px 16px rgba(128, 128, 128, 0.4);
+}
+
+.musicList-comment-title {
+  width: 100%;
+  height: 32px;
+  margin: 16px 0;
+  line-height: 32px;
+}
+
+.musicList-comment-title > div {
+  display: inline-block;
+  width: 5px;
+  height: 100%;
+  margin-left: 16px;
+  background-color: rgb(240, 110, 151);
+}
+
+.musicList-comment-title > p {
+  display: inline-block;
+  height: 100%;
+  font-weight: bold;
+  color: rgb(70, 70, 70);
+  line-height: 32px;
+  transform: translate(24px, -8px);
+}
+
+.musicList-comment > ul {
+  width: 100%;
+  height: auto;
+}
+
+.musicList-comment > ul > li {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+  list-style-type: none;
+}
+
+.musicList-comment-img {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin-left: 16px;
+  border-radius: 50%;
+}
+
+.musicList-comment-img > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.musicList-comment-info {
+  display: inline-block;
+  width: 236px;
+  height: auto;
+  margin: 0 16px;
+}
+
+.musicList-comment-info > p {
+  display: inline-block;
+  height: 16px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+}
+
+.musicList-comment-info > a {
+  display: inline-block;
+  height: 12px;
+  margin-left: 8px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #9d9db3;
+}
+
+.musicList-comment-info > div {
+  width: 220px;
+  height: auto;
+  margin: 8px 16px 0 0;
+  padding: 8px;
+  font-size: 12px;
+  color: #666;
+  background-color: #f5f5f5;
+  border-radius: 2px;
+}
+
+.send-musicList-comment {
+  position: relative;
+  width: 345px;
+  height: 292px;
+  margin: 32px 0 16px 0;
+}
+
+.send-musicList-comment > p {
+  width: 100%;
+  height: 32px;
+  font-size: 20px;
+  line-height: 32px;
+  color: rgb(63, 63, 63);
+  font-weight: bold;
+}
+
+.send-musicList-comment #musicList-comment-input {
+  box-sizing: border-box;
+  width: 313px;
+  height: 260px;
+  margin: 0 16px;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: rgb(34, 34, 34);
+  background-color: rgb(245, 245, 245);
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  resize: none;
+}
+
+.send-musicList-comment > div {
+  position: absolute;
+  bottom: 16px;
+  right: 32px;
+  font-size: 13px;
+  color: rgb(80, 80, 80);
+}
+
+.send-musicList-comment .send-comment {
+  position: absolute;
+  bottom: 8px;
+  left: 32px;
+  width: 64px;
+  height: 32px;
+  font-size: 14px;
+  line-height: 32px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgb(240, 110, 151);
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.send-musicList-comment .send-comment:hover {
+  background-color: rgb(241, 22, 90);
+  color: rgb(136, 227, 64);
+  transition: all 0.4s;
+}
+
+.space {
+  float: right;
+  width: 365px;
+  height: 84px;
+}
+/* 歌单页面样式end */

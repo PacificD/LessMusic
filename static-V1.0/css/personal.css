@@ -1,0 +1,546 @@
+/* 文字hover颜色: rgb(240, 110, 151);*/
+/* 主题颜色: rgb(241, 22, 90);*/
+
+/* 个人主页personal样式 */
+.personal {
+  position: relative;
+  display: none;
+  width: 1350px;
+  height: 1124px;
+  margin: 32px auto;
+}
+
+.personal-bg {
+  position: relative;
+  width: 100%;
+  height: 365px;
+}
+
+.personal-bg > img {
+  width: 100%;
+  height: 100%;
+}
+
+.personal-head {
+  position: absolute;
+  top: 64px;
+  width: 100%;
+  height: auto;
+}
+
+.personal-head > img {
+  display: block;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  transform: translate(-50%，0);
+}
+
+.personal-head > div {
+  width: 100%;
+  height: 48px;
+  font-size: 24px;
+  color: #fff;
+  line-height: 48px;
+  text-align: center;
+  letter-spacing: 1px;
+  font-family: "FuturaBT-Medium";
+}
+
+.personal-head > div > a {
+  display: inline-block;
+  margin-left: 12px;
+  font-size: 16px;
+  color: rgb(217, 217, 172);
+  font-weight: bold;
+}
+
+.personal-head > div > i {
+  margin-right: 12px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.personal-head > div > i:hover {
+  color: rgb(240, 110, 151);
+}
+
+.personal-head > div:nth-child(3) {
+  height: 26px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+  line-height: 26px;
+}
+
+.personal-head > div:nth-child(3) > span {
+  display: inline-block;
+}
+
+.personal-head > div:nth-child(3) > p {
+  display: inline-block;
+}
+
+.personal-head > p {
+  width: 100%;
+  height: 32px;
+  margin-top: 8px;
+  text-align: center;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.personal > ul {
+  position: absolute;
+  box-sizing: border-box;
+  top: 300px;
+  width: 100%;
+  height: 65px;
+  padding-left: 512px;
+  background: linear-gradient(to top, rgb(43, 43, 43), transparent);
+}
+
+.personal > ul > li {
+  display: inline-block;
+  height: 100%;
+  margin-right: 32px;
+  font-size: 16px;
+  color: #fff;
+  line-height: 65px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.personal > ul > li:hover {
+  color: rgb(241, 22, 90);
+}
+
+.personal > ul .personal-current {
+  color: rgb(241, 22, 90);
+}
+/* 个人主页personal样式 */
+
+/* 我喜欢mylikes样式 */
+.mylikes {
+  position: absolute;
+  display: block;
+  top: 365px;
+  width: 100%;
+  height: 660px;
+}
+
+.mylikes > ul {
+  position: absolute;
+  bottom: -60px;
+  width: 100%;
+  height: 660px;
+}
+
+.mylikes > ul > li {
+  width: 100%;
+  height: 60px;
+  list-style: none;
+}
+
+.mylikes > ul > li:nth-child(2n-1) {
+  background-color: rgb(247, 247, 247);
+}
+
+.mylikes > ul > li > div {
+  display: inline-block;
+  height: 100%;
+  line-height: 60px;
+  color: #494949;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.mylikes > ul > li > div:nth-child(1) {
+  box-sizing: border-box;
+  width: 400px;
+  padding-left: 16px;
+}
+
+.mylikes > ul > li > div:nth-child(2) {
+  width: 370px;
+}
+
+.mylikes > ul > li > div:nth-child(3) {
+  width: 420px;
+}
+
+.mylikes > ul > li > div:nth-child(4) {
+  box-sizing: border-box;
+  width: 140px;
+}
+
+.mylikes > ul > li > div > a {
+  position: relative;
+  font-size: 14px;
+  line-height: 60px;
+}
+
+.mylikes > ul > li > div:nth-child(4) > a {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 70%;
+  padding-left: 16px;
+}
+
+.mylikes > ul > li > div:nth-child(4) > i {
+  display: inline-block;
+  width: 30%;
+  text-align: right;
+}
+
+.mylikes > ul > li > div:nth-child(4) > i:hover {
+  color: rgb(241, 22, 90);
+  cursor: pointer;
+}
+
+.mylikes > ul > li > div:nth-child(1) > i:nth-child(3) {
+  display: inline-block;
+  height: 100%;
+  margin-left: 12px;
+  font-size: 16px;
+  line-height: 60px;
+}
+
+.mylikes > ul > li > div:nth-child(1) > i:nth-child(4) {
+  display: none;
+  float: right;
+  height: 100%;
+  margin-right: 48px;
+  font-size: 16px;
+  line-height: 60px;
+  cursor: pointer;
+}
+
+.mylikes > ul > li > div:nth-child(1) > i:nth-child(5) {
+  display: none;
+  float: right;
+  height: 100%;
+  margin-right: 16px;
+  font-size: 18px;
+  line-height: 60px;
+  cursor: pointer;
+}
+
+.mylikes > ul > li > div:nth-child(1):hover i:nth-child(4) {
+  display: inline-block;
+}
+
+.mylikes > ul > li > div:nth-child(1):hover i:nth-child(5) {
+  display: inline-block;
+}
+
+.mylikes > ul > li > div > i:hover {
+  color: rgb(88, 175, 16);
+  cursor: pointer;
+}
+
+.mylikes > ul > li > div:not(:nth-child(4)) > a:hover {
+  color: rgb(241, 22, 90);
+  cursor: pointer;
+}
+
+.mylikes-title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  list-style: none;
+  border-bottom: 1px solid rgba(97, 97, 97, 0.3);
+  z-index: 1;
+}
+
+.mylikes > .mylikes-title > div {
+  display: inline-block;
+  color: rgb(70, 70, 70);
+  font-weight: bold;
+  line-height: 60px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.mylikes > .mylikes-title > div > i {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.mylikes > .mylikes-title > div:nth-child(1) > i:hover {
+  color: rgb(241, 22, 90);
+  cursor: pointer;
+}
+
+.mylikes > .mylikes-title > div:nth-child(1) {
+  box-sizing: border-box;
+  width: 400px;
+  padding-left: 16px;
+}
+
+.mylikes > .mylikes-title > div:nth-child(2) {
+  width: 370px;
+}
+
+.mylikes > .mylikes-title > div:nth-child(3) {
+  width: 420px;
+}
+
+.mylikes > .mylikes-title > div:nth-child(4) {
+  box-sizing: border-box;
+  width: 140px;
+}
+
+.mylikes > .mylikes-title > div > i:hover {
+  color: rgb(88, 175, 16);
+  cursor: pointer;
+}
+/* 我喜欢mylikes样式 */
+
+/* myPlayLists我的歌单样式 */
+.myPlayLists {
+  position: absolute;
+  display: none;
+  top: 365px;
+  width: 100%;
+  height: 660px;
+}
+
+.myPlayLists-title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  list-style: none;
+  border-bottom: 1px solid rgba(97, 97, 97, 0.3);
+  z-index: 1;
+}
+
+.myPlayLists > .myPlayLists-title > div {
+  display: inline-block;
+  color: rgb(70, 70, 70);
+  font-weight: bold;
+  line-height: 60px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.myPlayLists > .myPlayLists-title > div > i {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.myPlayLists > .myPlayLists-title > div:nth-child(1) {
+  box-sizing: border-box;
+  width: 500px;
+  padding-left: 16px;
+}
+
+.myPlayLists > .myPlayLists-title > div:nth-child(2) {
+  width: 370px;
+}
+
+.myPlayLists > .myPlayLists-title > div:nth-child(3) {
+  width: 320px;
+}
+
+.myPlayLists > .myPlayLists-title > div:nth-child(4) {
+  box-sizing: border-box;
+  width: 140px;
+}
+
+.myPlayLists > ul {
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  height: auto;
+}
+
+.myPlayLists > ul > li {
+  display: grid;
+  width: 100%;
+  height: 80px;
+  list-style: none;
+  grid-template-columns: 500px 370px 320px 140px;
+  grid-template-rows: 80px;
+}
+
+.myPlayLists > ul > li:nth-child(2n-1) {
+  background-color: rgb(247, 247, 247);
+}
+
+.myPlayLists > ul > li > div {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 80px;
+}
+
+.myPlayLists > ul > li > div > img {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-right: 8px;
+  transform: translate(0, -15px);
+}
+
+.myPlayLists > ul > li > div:nth-child(1) > a {
+  display: inline-block;
+  width: 380px;
+  line-height: 80px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.myPlayLists > ul > li > div:nth-child(1) > a:hover {
+  color: rgb(240, 110, 151);
+  cursor: pointer;
+}
+
+.myPlayLists > ul > li > div:nth-child(1) > i {
+  display: none;
+  float: right;
+  margin-right: 32px;
+  line-height: 80px;
+  font-size: 18px;
+}
+
+.myPlayLists > ul > li > div:nth-child(1) > i:hover {
+  color: rgb(88, 175, 16);
+  cursor: pointer;
+}
+
+.myPlayLists > ul > li > div:nth-child(1):hover i {
+  display: block;
+}
+/* myPlayLists我的歌单样式end */
+
+/* myCollect我收藏的歌单样式 */
+.myCollect {
+  position: absolute;
+  display: none;
+  top: 365px;
+  width: 100%;
+  height: 660px;
+}
+
+.myCollect-title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  list-style: none;
+  border-bottom: 1px solid rgba(97, 97, 97, 0.3);
+  z-index: 1;
+}
+
+.myCollect > .myCollect-title > div {
+  display: inline-block;
+  color: rgb(70, 70, 70);
+  font-weight: bold;
+  line-height: 60px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.myCollect > .myCollect-title > div > i {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.myCollect > .myCollect-title > div:nth-child(1) {
+  box-sizing: border-box;
+  width: 500px;
+  padding-left: 16px;
+}
+
+.myCollect > .myCollect-title > div:nth-child(2) {
+  width: 370px;
+}
+
+.myCollect > .myCollect-title > div:nth-child(3) {
+  width: 320px;
+}
+
+.myCollect > .myCollect-title > div:nth-child(4) {
+  box-sizing: border-box;
+  width: 140px;
+}
+
+.myCollect > ul {
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  height: auto;
+}
+
+.myCollect > ul > li {
+  display: grid;
+  width: 100%;
+  height: 80px;
+  list-style: none;
+  grid-template-columns: 500px 370px 320px 140px;
+  grid-template-rows: 80px;
+}
+
+.myCollect > ul > li:nth-child(2n-1) {
+  background-color: rgb(247, 247, 247);
+}
+
+.myCollect > ul > li > div {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 80px;
+}
+
+.myCollect > ul > li > div > img {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-right: 8px;
+  transform: translate(0, -15px);
+}
+
+.myCollect > ul > li > div:nth-child(1) > a {
+  display: inline-block;
+  width: 380px;
+  line-height: 80px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.myCollect > ul > li > div:nth-child(1) > a:hover {
+  color: rgb(240, 110, 151);
+  cursor: pointer;
+}
+
+.myCollect > ul > li > div:nth-child(1) > i {
+  display: none;
+  float: right;
+  margin-right: 32px;
+  line-height: 80px;
+  font-size: 18px;
+}
+
+.myCollect > ul > li > div:nth-child(1) > i:hover {
+  color: rgb(88, 175, 16);
+  cursor: pointer;
+}
+
+.myCollect > ul > li > div:nth-child(1):hover i {
+  display: block;
+}
+/* myCollect我收藏的歌单样式 */
