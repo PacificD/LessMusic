@@ -1,14 +1,13 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-18 10:14:40
- * @LastEditTime: 2022-07-23 10:23:46
+ * @LastEditTime: 2022-07-23 15:59:28
  * @LastEditors: Pacific_D
  * @Description:
- * @FilePath: \less-music\src\pages\Home\index.tsx
+ * @FilePath: \lessMusic\src\pages\Home\index.tsx
  */
 
 import { FC } from "react"
-import { ColorModeSwitcher } from "@/components"
 import { Box, Text, VStack, Grid } from "@chakra-ui/react"
 import { useHotTopicQuery } from "@/services"
 
@@ -31,7 +30,6 @@ const Home: FC = () => {
     return (
         <Box fontSize="xl" textAlign="center">
             <Grid minH="100vh" p={3}>
-                <ColorModeSwitcher justifySelf="flex-end" />
                 <Box layerStyle="selected">This is a box</Box>
                 <VStack spacing={8}>
                     {data.hot.map((topic: any) => (

@@ -1,10 +1,10 @@
 /*
  * @Author: Giaruei
  * @Date: 2022-07-23 09:53:12
- * @LastEditTime: 2022-07-23 11:57:38
+ * @LastEditTime: 2022-07-25 10:03:57
  * @LastEditors: Pacific_D
  * @Description:
- * @FilePath: \less-music\src\pages\NotFound\index.tsx
+ * @FilePath: \lessMusic\src\pages\NotFound\index.tsx
  */
 import { Box, Flex, Text } from "@chakra-ui/react"
 import { FC } from "react"

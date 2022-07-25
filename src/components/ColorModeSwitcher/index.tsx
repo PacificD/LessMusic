@@ -1,10 +1,10 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-03-30 21:36:37
- * @LastEditTime: 2022-07-18 12:15:16
+ * @LastEditTime: 2022-07-23 16:44:31
  * @LastEditors: Pacific_D
  * @Description:
- * @FilePath: \less-music\src\components\ColorModeSwitcher\index.tsx
+ * @FilePath: \lessMusic\src\components\ColorModeSwitcher\index.tsx
  */
 import { useColorMode, useColorModeValue, IconButton, IconButtonProps } from "@chakra-ui/react"
 import { FC } from "react"
