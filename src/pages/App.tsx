@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-03-30 22:15:53
- * @LastEditTime: 2022-07-23 15:58:56
+ * @LastEditTime: 2022-07-25 17:14:27
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\pages\App.tsx
@@ -11,6 +11,7 @@ import ViewRouter from "@/router/ViewRouter"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import "@/style/index.css"
 import { Navbar, Playbar } from "@/components"
+import { Box } from "@chakra-ui/react"
 
 export const AppContext = createContext<{
     userInfo: string
@@ -28,7 +29,9 @@ const App: FC = () => {
         >
             <QueryClientProvider client={queryClient}>
                 <Navbar />
-                <ViewRouter />
+                <Box py="70px">
+                    <ViewRouter />
+                </Box>
                 <Playbar />
             </QueryClientProvider>
         </AppContext.Provider>
