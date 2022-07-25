@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-25 11:44:26
- * @LastEditTime: 2022-07-25 15:13:12
+ * @LastEditTime: 2022-07-25 20:25:46
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\components\Playbar\SongInfo\index.tsx
@@ -33,7 +33,7 @@ const SongInfo: FC<IProps> = ({ cover, name, singerInfo }) => {
 
     return (
         <Flex alignItems="center" overflow="hidden" w={80}>
-            <Box cursor="pointer" position="relative" role="group" w={16}>
+            <Box cursor="pointer" position="relative" role="group" userSelect="none" w={16}>
                 <Center
                     _groupHover={{ opacity: 1 }}
                     bg="rgba(0,0,0,0.3)"
@@ -61,7 +61,7 @@ const SongInfo: FC<IProps> = ({ cover, name, singerInfo }) => {
                 </Text>
                 <Box w="full" whiteSpace="nowrap">
                     {singerList.map((singer, index) => (
-                        <Text
+                        <Box
                             _hover={{ color: "theme.200" }}
                             color={textColor}
                             cursor="pointer"
@@ -77,7 +77,7 @@ const SongInfo: FC<IProps> = ({ cover, name, singerInfo }) => {
                                     /
                                 </Text>
                             )}
-                        </Text>
+                        </Box>
                     ))}
                 </Box>
             </Flex>

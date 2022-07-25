@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-23 15:18:21
- * @LastEditTime: 2022-07-25 17:24:02
+ * @LastEditTime: 2022-07-25 20:25:22
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\components\Navbar\index.tsx
@@ -28,6 +28,7 @@ const Navbar: FC = () => {
             position="fixed"
             px={24}
             shadow="xl"
+            userSelect="none"
             w="full"
             zIndex={20}
         >

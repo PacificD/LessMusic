@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-18 12:12:04
- * @LastEditTime: 2022-07-25 15:49:05
+ * @LastEditTime: 2022-07-25 19:39:25
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\types\index.ts

@@ -1,34 +1,35 @@
 /*
  * @Author: Giaruei
  * @Date: 2022-07-23 09:53:12
- * @LastEditTime: 2022-07-25 10:03:57
+ * @LastEditTime: 2022-07-25 20:50:25
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\pages\NotFound\index.tsx
  */
-import { Box, Flex, Text } from "@chakra-ui/react"
+import { Box, Flex, Text, Image } from "@chakra-ui/react"
 import { FC } from "react"
 import { useNavigate } from "react-router-dom"
 
-const Error: FC = () => {
+const NotFound: FC = () => {
     const navigate = useNavigate()
     const backToMainPage = () => navigate("/")
 
     return (
-        <Flex alignItems="center" cursor="default" direction="column" justify="center">
+        <Flex alignItems="center" cursor="default" direction="column" justifyContent="space-around">
             <Text
                 bgClip="text"
-                bgGradient="linear(to-l, #7928CA, #FF0080)"
+                bgGradient="linear(to-l, theme.600, theme.100)"
                 fontSize="100px"
                 fontWeight="extrabold"
-                mt="200px"
+                mt={8}
                 textAlign="center"
             >
-                Error! This is 404 !
+                Page not found
             </Text>
+            <Image alt="404" src="./svg/404.svg" w="96" />
             <Box
                 _hover={{ cursor: "pointer", transform: "scale(1.1)" }}
-                bgGradient="linear(to-l, #7928CA, #FF0080)"
+                bgGradient="linear(to-l, theme.200, theme.400)"
                 borderRadius="12px"
                 h="80px"
                 mt="40px"
@@ -50,4 +51,4 @@ const Error: FC = () => {
     )
 }
 
-export default Error
+export default NotFound

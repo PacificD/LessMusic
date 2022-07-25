@@ -1,10 +1,10 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-18 10:28:37
- * @LastEditTime: 2022-07-22 21:37:09
+ * @LastEditTime: 2022-07-25 19:43:29
  * @LastEditors: Pacific_D
  * @Description:
- * @FilePath: \less-music\src\pages\Login\index.tsx
+ * @FilePath: \lessMusic\src\pages\Login\index.tsx
  */
 import { useHighqualityPlaylistQuery, usePlaylistDetailQuery } from "@/services"
 import { IRes } from "@/types"

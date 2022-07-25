@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-25 16:26:13
- * @LastEditTime: 2022-07-25 17:08:46
+ * @LastEditTime: 2022-07-25 20:46:04
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\components\Playbar\RightSection\index.tsx
@@ -30,6 +30,10 @@ const CRiPlayListFill = chakra(RiPlayListFill),
         [2, ["随机播放", <CFaRandom key="2" {...iconProperty} fontSize="16" />]]
     ])
 
+/**
+ * @description: Playbar右侧组件
+ * @return {*}
+ */
 const RightSection: FC = () => {
     const [mode, setMode] = useState(0),
         modeInfo = useMemo(() => modeMapper.get(mode), [mode])
@@ -38,7 +42,8 @@ const RightSection: FC = () => {
         setMode(mode => (mode === 2 ? 0 : mode + 1))
     }
     return (
-        <Stack direction="row" spacing={6}>
+        <Stack direction="row" spacing={6} userSelect="none">
+            <Text mr={24}>0:00 / 0:00</Text>
             <Flex alignItems="center" mr={6}>
                 <Text>{modeInfo![0]}</Text>
                 <Box ml={2} onClick={toggleMode}>
