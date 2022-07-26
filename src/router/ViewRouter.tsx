@@ -1,17 +1,20 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-19 09:57:29
- * @LastEditTime: 2022-07-23 10:00:54
+ * @LastEditTime: 2022-07-26 17:44:04
  * @LastEditors: Pacific_D
  * @Description:
- * @FilePath: \less-music\src\router\ViewRouter.tsx
+ * @FilePath: \lessMusic\src\router\ViewRouter.tsx
  */
 
 import { Flex } from "@chakra-ui/react"
+import { AnimatePresence } from "framer-motion"
 import { FC, Suspense } from "react"
-import RouterConfig from "./config"
+import { Routes, useLocation, Route } from "react-router-dom"
+import config from "./config"
 
 const ViewRouter: FC = () => {
+    const location = useLocation()
     return (
         <Suspense
             fallback={
@@ -26,7 +29,13 @@ const ViewRouter: FC = () => {
                 </Flex>
             }
         >
-            <RouterConfig />
+            <AnimatePresence exitBeforeEnter>
+                <Routes key={location.pathname} location={location}>
+                    {config.map(route => (
+                        <Route element={route.element} key={route.path} path={route.path} />
+                    ))}
+                </Routes>
+            </AnimatePresence>
         </Suspense>
     )
 }
