@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-25 10:08:15
- * @LastEditTime: 2022-07-25 10:13:42
+ * @LastEditTime: 2022-07-26 14:29:22
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\components\Navbar\Tablist\config.ts
@@ -19,7 +19,7 @@ const config: Array<TablistItem> = [
     },
     {
         name: "排行榜",
-        route: "/ranking"
+        route: "/rank"
     },
     {
         name: "歌手",

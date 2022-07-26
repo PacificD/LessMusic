@@ -1,17 +1,50 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-18 10:14:40
- * @LastEditTime: 2022-07-25 17:13:52
+ * @LastEditTime: 2022-07-26 20:08:53
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\pages\Home\index.tsx
  */
 
 import { FC } from "react"
-import { Box, Text, VStack, Grid } from "@chakra-ui/react"
+import { Flex, useColorModeValue } from "@chakra-ui/react"
 import { useHotTopicQuery } from "@/services"
+import { motion } from "framer-motion"
+import NewestMusic from "./NewestMusic"
+
+const animation = {
+    initial: {
+        scale: 0,
+        opacity: 0,
+        transition: {
+            type: "spring",
+            damping: 20,
+            stiffness: 100
+        }
+    },
+    animate: {
+        scale: 1,
+        opacity: 1,
+        transition: {
+            type: "spring",
+            damping: 20,
+            stiffness: 100
+        }
+    },
+    exit: {
+        x: 0,
+        opacity: 0,
+        transition: {
+            type: "spring",
+            damping: 20,
+            stiffness: 100
+        }
+    }
+}
 
 const Home: FC = () => {
+    const bg = useColorModeValue("white", "darkMode")
     // const { data, isLoading, isError, error } = useHotTopicQuery(50, 20)
 
     // if (isLoading) {
@@ -28,18 +61,18 @@ const Home: FC = () => {
     // }
     // console.log(data)
     return (
-        <Box fontSize="xl" textAlign="center">
-            <Grid minH="100vh">
-                <Box layerStyle="selected">This is a box</Box>
-                <VStack spacing={8}>
-                    {/* {data.hot.map((topic: any) => (
-                        <Text key={topic.actId} maxW="80vw">
-                            {JSON.stringify(topic)}
-                        </Text>
-                    ))} */}
-                </VStack>
-            </Grid>
-        </Box>
+        <motion.div animate="animate" exit="exit" initial="initial" variants={animation}>
+            <Flex
+                alignItems="center"
+                bg={bg}
+                className="mainContent"
+                flexDirection="column"
+                justifyContent="center"
+                layerStyle="mainContent"
+            >
+                <NewestMusic />
+            </Flex>
+        </motion.div>
     )
 }
 export default Home

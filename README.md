@@ -24,7 +24,7 @@
 -   [react-icons](https://react-icons.github.io/react-icons/)：图标
 -   [ahooks](https://ahooks.js.org/zh-CN/hooks/use-request/index)：自定义 hooks
 -   [lottie-react](https://lottiereact.com/)：lottie 动画
-    -   [lottie-files](https://lottiefiles.com/featured)：动画素材
+-   [lottie-files](https://lottiefiles.com/featured)：动画素材
 -   [react-router-dom v6](https://reactrouter.com/docs/en/v6)：路由
 -   [embla-carousel](https://www.embla-carousel.com/)：轮播图
 
@@ -41,6 +41,15 @@
 -   数据缓存
 -   夜间模式
 -   鉴权
+
+## TODO:
+
+-   navbar 下标
+-   作者 Info 与不盈利提示
+-   playing：做 motion design
+-   骨架屏优化 最新歌曲
+-   用 requestAnimationFrame 封装一个 scrollToTop
+-   recommend 子路由：歌手/歌单/MV
 
 ## commit 规范
 

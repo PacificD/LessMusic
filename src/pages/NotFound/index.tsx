@@ -1,21 +1,28 @@
 /*
  * @Author: Giaruei
  * @Date: 2022-07-23 09:53:12
- * @LastEditTime: 2022-07-25 20:50:25
+ * @LastEditTime: 2022-07-26 18:38:08
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\pages\NotFound\index.tsx
  */
-import { Box, Flex, Text, Image } from "@chakra-ui/react"
+import { Box, Flex, Text, Image, useColorModeValue } from "@chakra-ui/react"
 import { FC } from "react"
 import { useNavigate } from "react-router-dom"
 
 const NotFound: FC = () => {
-    const navigate = useNavigate()
-    const backToMainPage = () => navigate("/")
+    const navigate = useNavigate(),
+        bg = useColorModeValue("white", "darkMode")
 
     return (
-        <Flex alignItems="center" cursor="default" direction="column" justifyContent="space-around">
+        <Flex
+            alignItems="center"
+            bg={bg}
+            cursor="default"
+            direction="column"
+            h="calc(100vh - 130px)"
+            justifyContent="space-around"
+        >
             <Text
                 bgClip="text"
                 bgGradient="linear(to-l, theme.600, theme.100)"
@@ -33,7 +40,7 @@ const NotFound: FC = () => {
                 borderRadius="12px"
                 h="80px"
                 mt="40px"
-                onClick={backToMainPage}
+                onClick={() => navigate("/")}
                 transition="all .5s"
                 w="300px"
             >

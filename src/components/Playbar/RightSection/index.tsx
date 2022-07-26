@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-25 16:26:13
- * @LastEditTime: 2022-07-25 20:46:04
+ * @LastEditTime: 2022-07-26 10:14:57
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\components\Playbar\RightSection\index.tsx
@@ -43,7 +43,6 @@ const RightSection: FC = () => {
     }
     return (
         <Stack direction="row" spacing={6} userSelect="none">
-            <Text mr={24}>0:00 / 0:00</Text>
             <Flex alignItems="center" mr={6}>
                 <Text>{modeInfo![0]}</Text>
                 <Box ml={2} onClick={toggleMode}>

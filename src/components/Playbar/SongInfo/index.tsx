@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-25 11:44:26
- * @LastEditTime: 2022-07-25 20:25:46
+ * @LastEditTime: 2022-07-26 15:20:40
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\components\Playbar\SongInfo\index.tsx
@@ -10,6 +10,7 @@
 import { Box, Image, Flex, Text, useColorModeValue, Center } from "@chakra-ui/react"
 import { FC, useMemo } from "react"
 import { BsArrowsAngleExpand } from "react-icons/bs"
+import { useLocation, useNavigate } from "react-router-dom"
 
 interface IProps {
     cover: string
@@ -29,11 +30,24 @@ const SongInfo: FC<IProps> = ({ cover, name, singerInfo }) => {
             () => (Array.isArray(singerInfo) ? singerInfo : [singerInfo]),
             [singerInfo]
         ),
-        textColor = useColorModeValue("gray.800", "gray.300")
+        textColor = useColorModeValue("gray.800", "gray.300"),
+        navigate = useNavigate(),
+        location = useLocation()
+
+    const togglePlaying = () => {
+        location.pathname.indexOf("playing") === 1 ? navigate(-1) : navigate("/playing/38689014")
+    }
 
     return (
         <Flex alignItems="center" overflow="hidden" w={80}>
-            <Box cursor="pointer" position="relative" role="group" userSelect="none" w={16}>
+            <Box
+                cursor="pointer"
+                onClick={togglePlaying}
+                position="relative"
+                role="group"
+                userSelect="none"
+                w={16}
+            >
                 <Center
                     _groupHover={{ opacity: 1 }}
                     bg="rgba(0,0,0,0.3)"

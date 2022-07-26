@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-25 11:41:32
- * @LastEditTime: 2022-07-25 11:42:36
+ * @LastEditTime: 2022-07-26 19:14:42
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\components\Playbar\ProgressController\index.tsx
@@ -25,8 +25,9 @@ const ProgressController: FC = () => {
             onMouseEnter={() => setIsTooltip(true)}
             onMouseLeave={() => setIsTooltip(false)}
             position="absolute"
-            top={0}
-            transform="translate(0, 50%)"
+            top="0"
+            transform="translate(0, -100%)"
+            zIndex={1}
         >
             <SliderTrack bg="red.100">
                 <SliderFilledTrack bg="theme.200" />

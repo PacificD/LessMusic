@@ -22,7 +22,6 @@ const MainButton: FC = () => {
         <Stack
             direction="row"
             left="50%"
-            ml={8}
             position="absolute"
             spacing={10}
             transform="translate(-50%, 0)"
