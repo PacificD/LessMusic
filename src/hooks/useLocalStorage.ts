@@ -1,10 +1,10 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-18 12:18:21
- * @LastEditTime: 2022-07-18 12:18:23
+ * @LastEditTime: 2022-07-27 17:32:48
  * @LastEditors: Pacific_D
  * @Description:
- * @FilePath: \less-music\src\hooks\useLocalStorage.ts
+ * @FilePath: \lessMusic\src\hooks\useLocalStorage.ts
  */
 import { useState, useEffect, useCallback } from "react"
 import CryptoJS from "crypto-js"

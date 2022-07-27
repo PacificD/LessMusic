@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-25 11:04:25
- * @LastEditTime: 2022-07-25 16:35:26
+ * @LastEditTime: 2022-07-27 17:04:03
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\components\Playbar\VolumeController\index.tsx
@@ -27,6 +27,7 @@ const CFiVolume2 = chakra(FiVolume2),
 
 interface IProps {
     width: number
+    audioRef: React.RefObject<HTMLAudioElement>
 }
 
 /**
@@ -34,7 +35,7 @@ interface IProps {
  * @param {number} width -组件chakra宽度
  * @return {*}
  */
-const VolumeController: FC<IProps> = ({ width }) => {
+const VolumeController: FC<IProps> = ({ width, audioRef }) => {
     const [isTooltip, setIsTooltip] = useState(false),
         [volume, setVolume] = useState({
             current: 64,
@@ -44,6 +45,7 @@ const VolumeController: FC<IProps> = ({ width }) => {
 
     const toggleSound = () => {
         if (volume.current === 0) {
+            audioRef.current!.volume = volume.memo / 100
             setVolume(prev => {
                 return {
                     current: prev.memo,
@@ -51,10 +53,19 @@ const VolumeController: FC<IProps> = ({ width }) => {
                 }
             })
         } else {
+            audioRef.current!.volume = 0
             setVolume(prev => {
                 return { current: 0, memo: prev.memo }
             })
         }
+    }
+
+    const changeVolume = (v: number) => {
+        audioRef.current!.volume = v / 100
+        setVolume({
+            current: v,
+            memo: v
+        })
     }
 
     return (
@@ -79,12 +90,7 @@ const VolumeController: FC<IProps> = ({ width }) => {
             <Slider
                 aria-label="slider-ex-5"
                 ml={4}
-                onChange={v =>
-                    setVolume({
-                        current: v,
-                        memo: v
-                    })
-                }
+                onChange={v => changeVolume(v)}
                 onMouseEnter={() => setIsTooltip(true)}
                 onMouseLeave={() => setIsTooltip(false)}
                 value={volume.current}

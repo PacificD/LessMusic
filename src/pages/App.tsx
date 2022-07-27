@@ -1,12 +1,12 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-03-30 22:15:53
- * @LastEditTime: 2022-07-26 18:43:42
+ * @LastEditTime: 2022-07-27 12:02:47
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\pages\App.tsx
  */
-import { FC, createContext, useMemo } from "react"
+import { FC, createContext, useMemo, useContext } from "react"
 import ViewRouter from "@/router/ViewRouter"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import "@/style/index.css"

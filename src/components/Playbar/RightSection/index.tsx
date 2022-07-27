@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-25 16:26:13
- * @LastEditTime: 2022-07-26 10:14:57
+ * @LastEditTime: 2022-07-27 17:00:34
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\components\Playbar\RightSection\index.tsx
@@ -30,11 +30,15 @@ const CRiPlayListFill = chakra(RiPlayListFill),
         [2, ["随机播放", <CFaRandom key="2" {...iconProperty} fontSize="16" />]]
     ])
 
+interface IProps {
+    audioRef: React.RefObject<HTMLAudioElement>
+}
+
 /**
  * @description: Playbar右侧组件
  * @return {*}
  */
-const RightSection: FC = () => {
+const RightSection: FC<IProps> = ({ audioRef }) => {
     const [mode, setMode] = useState(0),
         modeInfo = useMemo(() => modeMapper.get(mode), [mode])
 
@@ -50,7 +54,7 @@ const RightSection: FC = () => {
                 </Box>
             </Flex>
             <CRiPlayListFill {...iconProperty} />
-            <VolumeController width={44} />
+            <VolumeController audioRef={audioRef} width={44} />
         </Stack>
     )
 }

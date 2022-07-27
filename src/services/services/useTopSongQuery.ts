@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-26 20:00:11
- * @LastEditTime: 2022-07-26 20:42:29
+ * @LastEditTime: 2022-07-27 10:50:27
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\services\services\useTopSongQuery.ts
@@ -17,15 +17,14 @@ import request from "../request"
  */
 const useTopSongQuery = (type = 96) => {
     const queryKey = ["topSong"]
-    const fetchData = () => {
-        return request(
+    const fetchData = () =>
+        request(
             "/top/song",
             {
                 type
             },
             METHODS.GET
         ).then(res => res.data.code === 200 && res.data)
-    }
 
     return useQuery(queryKey, fetchData)
 }
