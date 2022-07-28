@@ -1,11 +1,12 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-26 20:37:28
- * @LastEditTime: 2022-07-26 21:21:31
+ * @LastEditTime: 2022-07-28 12:05:39
  * @LastEditors: Pacific_D
  * @Description:
- * @FilePath: \lessMusic\src\pages\Home\NewestMusic\newSong.tsx
+ * @FilePath: \lessMusic\src\pages\Home\NewestMusic\NewSong.tsx
  */
+import { useCtxValue } from "@/hooks"
 import { Artist } from "@/types"
 import { Flex, Stack, Box, useColorModeValue, Image, Text, chakra } from "@chakra-ui/react"
 import { FC } from "react"
@@ -25,9 +26,16 @@ interface IProps {
 }
 
 const NewSong: FC<IProps> = ({ id, name, cover, artists, index }) => {
-    const bg = useColorModeValue("white", "darkMode")
+    const bg = useColorModeValue("white", "darkMode"),
+        { playMusic } = useCtxValue()
+
     const play = () => {
-        console.log("play music: ", id)
+        playMusic({
+            id,
+            name,
+            cover,
+            artists
+        })
     }
     return (
         <Flex

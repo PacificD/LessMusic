@@ -1,16 +1,15 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-03-30 21:51:13
- * @LastEditTime: 2022-07-22 18:15:44
+ * @LastEditTime: 2022-07-28 15:55:27
  * @LastEditors: Pacific_D
  * @Description:
- * @FilePath: \less-music\src\services\axios.ts
+ * @FilePath: \lessMusic\src\services\axios.ts
  */
 import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios"
 import defaultConfig, { LOCALSTORAGE_TOKEN_KEY } from "./config"
 import { showMessage } from "./status"
 import qs from "qs"
-import { IRes } from "@/types"
 
 // 请求Map，因为新版本axios不推荐使用cancelToken来取消请求，使用AbortController对象来实现
 // 重复请求时调用value的AbortController.abort()方法取消请求。
@@ -116,9 +115,6 @@ const createAxiosInstance = (config?: AxiosRequestConfig): AxiosInstance => {
                 // 请求已发出，但是不在2xx的范围
                 showMessage(response.status)
                 return Promise.reject(response.data)
-            } else {
-                //TODO: 封装msg组件
-                // alert("网络连接异常,请稍后再试!")
             }
         }
     )

@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-25 16:26:13
- * @LastEditTime: 2022-07-27 17:00:34
+ * @LastEditTime: 2022-07-28 17:14:01
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\components\Playbar\RightSection\index.tsx
@@ -13,8 +13,47 @@ import { RiPlayListFill } from "react-icons/ri"
 import { BiSortDown } from "react-icons/bi"
 import { ImLoop2 } from "react-icons/im"
 import { FaRandom } from "react-icons/fa"
-import { chakra, Stack, Box, Text, Flex } from "@chakra-ui/react"
+import { chakra, Stack, Box, Text, Flex, Tooltip } from "@chakra-ui/react"
+import { AnimatePresence, motion } from "framer-motion"
 
+const animation = {
+    initial: {
+        width: 0,
+        opacity: 0,
+        x: 0,
+        y: 100,
+        transition: {
+            type: "spring",
+            damping: 20,
+            stiffness: 100
+        }
+    },
+    animate: {
+        width: "450px",
+        opacity: 1,
+        x: -100,
+        y: -560,
+        transition: {
+            type: "spring",
+            damping: 20,
+            stiffness: 100
+        }
+    },
+    exit: {
+        width: 0,
+        opacity: 0,
+        x: 0,
+        y: 100,
+        transition: {
+            type: "spring",
+            damping: 20,
+            stiffness: 100
+        }
+    }
+}
+
+// TODO: transition: top
+// TODO: tooggle -> top
 const CRiPlayListFill = chakra(RiPlayListFill),
     CBiSortDown = chakra(BiSortDown),
     CImLoop2 = chakra(ImLoop2),
@@ -40,20 +79,43 @@ interface IProps {
  */
 const RightSection: FC<IProps> = ({ audioRef }) => {
     const [mode, setMode] = useState(0),
+        [isPlayList, setIsPlayList] = useState(false),
         modeInfo = useMemo(() => modeMapper.get(mode), [mode])
 
     const toggleMode = () => {
         setMode(mode => (mode === 2 ? 0 : mode + 1))
     }
     return (
-        <Stack direction="row" spacing={6} userSelect="none">
+        <Stack direction="row" position="relative" spacing={6} userSelect="none">
             <Flex alignItems="center" mr={6}>
                 <Text>{modeInfo![0]}</Text>
                 <Box ml={2} onClick={toggleMode}>
                     {modeInfo![1]}
                 </Box>
             </Flex>
-            <CRiPlayListFill {...iconProperty} />
+            <AnimatePresence exitBeforeEnter>
+                {isPlayList ? (
+                    <motion.div
+                        animate="animate"
+                        exit="exit"
+                        initial="initial"
+                        style={{ position: "absolute", margin: 0 }}
+                        variants={animation}
+                    >
+                        <Stack bg="theme.200" h="520px"></Stack>
+                    </motion.div>
+                ) : (
+                    ""
+                )}
+            </AnimatePresence>
+            <Tooltip bg="gray.100" color="black" hasArrow label="播放列表">
+                <Box>
+                    <CRiPlayListFill
+                        {...iconProperty}
+                        onClick={() => setIsPlayList(isPlayList => !isPlayList)}
+                    />
+                </Box>
+            </Tooltip>
             <VolumeController audioRef={audioRef} width={44} />
         </Stack>
     )

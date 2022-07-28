@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-25 10:08:15
- * @LastEditTime: 2022-07-26 14:29:22
+ * @LastEditTime: 2022-07-28 20:06:50
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\components\Navbar\Tablist\config.ts
@@ -27,7 +27,7 @@ const config: Array<TablistItem> = [
     },
     {
         name: "歌单",
-        route: "/playlist"
+        route: "/playlist/3200013727"
     },
     {
         name: "MV",

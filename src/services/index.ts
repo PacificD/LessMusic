@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-22 14:21:33
- * @LastEditTime: 2022-07-27 17:34:47
+ * @LastEditTime: 2022-07-28 20:05:36
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\services\index.ts
@@ -11,3 +11,4 @@ export { default as usePlaylistDetailQuery } from "./services/usePlaylistDetailQ
 export { default as useHighqualityPlaylistQuery } from "./services/useHighqualityPlaylistQuery"
 export { default as useTopSongQuery } from "./services/useTopSongQuery"
 export { default as useMusicUrlQuery } from "./services/useMusicUrlQuery"
+export { default as usePlaylistTrackAllQuery } from "./services/usePlaylistTrackAllQuery"

@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-25 15:21:40
- * @LastEditTime: 2022-07-27 17:45:40
+ * @LastEditTime: 2022-07-28 11:29:46
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\components\Playbar\MainButton\index.tsx
@@ -15,13 +15,15 @@ import PauseButton from "./PauseButton"
 
 interface IProps {
     audioRef: React.RefObject<HTMLAudioElement>
+    isPlaying: boolean
+    togglePlaying: () => void
 }
 
 /**
  * @description: 控制歌曲暂停，切换上/下一首歌曲的组件
  * @return {*}
  */
-const MainButton: FC<IProps> = ({ audioRef }) => {
+const MainButton: FC<IProps> = ({ audioRef, isPlaying, togglePlaying }) => {
     return (
         <Stack
             direction="row"
@@ -31,7 +33,7 @@ const MainButton: FC<IProps> = ({ audioRef }) => {
             transform="translate(-50%, 0)"
         >
             <ArrowButton direction={Direction.left} />
-            <PauseButton audioRef={audioRef} />
+            <PauseButton audioRef={audioRef} isPlaying={isPlaying} togglePlaying={togglePlaying} />
             <ArrowButton direction={Direction.right} />
         </Stack>
     )

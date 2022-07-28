@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-18 12:12:04
- * @LastEditTime: 2022-07-27 17:58:45
+ * @LastEditTime: 2022-07-28 11:48:58
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\types\index.ts
@@ -24,4 +24,4 @@ export type { Song } from "./song"
 
 export type { Album } from "./album"
 
-export type { PlayingInfo } from "./music"
+export type { PlayingMusic } from "./music"

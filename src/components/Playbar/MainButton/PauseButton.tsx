@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-25 16:10:40
- * @LastEditTime: 2022-07-27 17:47:45
+ * @LastEditTime: 2022-07-28 11:30:05
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\components\Playbar\MainButton\PauseButton.tsx
@@ -17,25 +17,15 @@ const buttonShadow = "1px 1px 6px rgb(128 128 128 / 40%)",
 
 interface IProps {
     audioRef: React.RefObject<HTMLAudioElement>
+    isPlaying: boolean
+    togglePlaying: () => void
 }
 
 /**
  * @description: 歌曲暂停组件
  * @return {*}
  */
-const PauseButton: FC<IProps> = ({ audioRef }) => {
-    const [isPlaying, setIsPlaying] = useState(false)
-
-    const togglePlaying = () => {
-        if (isPlaying) {
-            setIsPlaying(false)
-            audioRef.current!.pause()
-        } else {
-            setIsPlaying(true)
-            audioRef?.current!.play()
-        }
-    }
-
+const PauseButton: FC<IProps> = ({ audioRef, isPlaying, togglePlaying }) => {
     return (
         <Circle
             _hover={{ borderColor: "theme.400" }}
