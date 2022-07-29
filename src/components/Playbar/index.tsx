@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-23 15:58:35
- * @LastEditTime: 2022-07-28 16:26:31
+ * @LastEditTime: 2022-07-29 22:20:41
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\components\Playbar\index.tsx
@@ -13,7 +13,7 @@ import ProgressController from "./ProgressController"
 import SongInfo from "./SongInfo"
 import RightSection from "./RightSection"
 import { useMusicUrlQuery } from "@/services"
-import { IRes } from "@/types"
+import { IRes, PlayingMusic } from "@/types"
 import { formatPlayTime } from "@/utils"
 import { useCtxValue } from "@/hooks"
 
@@ -24,7 +24,8 @@ import { useCtxValue } from "@/hooks"
 const Playbar: FC = () => {
     const bg = useColorModeValue("white", "darkMode"),
         [currentTime, setCurrentTime] = useState(0),
-        { playingMusic } = useCtxValue(),
+        [mode, setMode] = useState<number>(0),
+        { playlist, playMusic, playingMusic } = useCtxValue(),
         toast = useToast()
 
     const audioRef = useRef<HTMLAudioElement>(null),
@@ -41,10 +42,7 @@ const Playbar: FC = () => {
         [data, isLoading]
     )
 
-    const duration: number = useMemo(
-        () => Math.round(audioRef.current?.duration ?? 0),
-        [audioRef.current?.duration]
-    )
+    const duration: number = Math.round(audioRef.current?.duration ?? 0)
 
     /**
      * @description: 播放时间更新事件
@@ -78,8 +76,46 @@ const Playbar: FC = () => {
         }
     }
 
-    const playEnded = () => {
-        console.log("end!")
+    /**
+     * @description: 切换歌曲
+     * @param {"next" | "prev"} order
+     * @return {*}
+     */
+    const playNextOrPrev = (order: "next" | "prev" = "next") => {
+        let index,
+            music = {}
+
+        const getRandomIndex = (): number => {
+            const currIndex = playlist.findIndex(
+                (music: PlayingMusic) => music.id === playingMusic.id
+            )
+            let randomIndex = currIndex
+            while (randomIndex === currIndex) {
+                randomIndex = Math.round(Math.random() * playlist.length)
+            }
+            return randomIndex === playlist.length ? randomIndex - 1 : randomIndex
+        }
+        switch (mode) {
+            case 0:
+                index = playlist.findIndex((music: PlayingMusic) => music.id === playingMusic.id)
+                if (order === "prev") {
+                    index = index === 0 ? playlist.length - 1 : index - 1
+                    playMusic(playlist[index])
+                } else {
+                    index = index + 1 >= playlist.length ? 0 : index + 1
+                    playMusic(playlist[index])
+                }
+                break
+            case 1:
+                audioRef.current!.play()
+                break
+            case 2:
+                playMusic(playlist[getRandomIndex()])
+                break
+            default:
+                playMusic(playingMusic)
+                break
+        }
     }
 
     if (isError) {
@@ -97,7 +133,7 @@ const Playbar: FC = () => {
         <Box bottom={0} h="60px" position="fixed" w="full">
             <audio
                 className="audio"
-                onEnded={playEnded}
+                onEnded={() => playNextOrPrev("next")}
                 onLoadedMetadata={mediaOnLoaded}
                 onTimeUpdate={e => playTimeUpdate(e)}
                 ref={audioRef}
@@ -129,12 +165,18 @@ const Playbar: FC = () => {
                 <MainButton
                     audioRef={audioRef}
                     isPlaying={isPlaying}
+                    playNextOrPrev={playNextOrPrev}
                     togglePlaying={togglePlaying}
                 />
                 <Text left="60%" position="absolute">
-                    {formatPlayTime(currentTime)} / {formatPlayTime(duration)}
+                    {formatPlayTime(currentTime)} / {formatPlayTime(playingMusic.duration)}
                 </Text>
-                <RightSection audioRef={audioRef} />
+                {useMemo(
+                    () => (
+                        <RightSection audioRef={audioRef} mode={mode} setMode={setMode} />
+                    ),
+                    [mode]
+                )}
             </Flex>
         </Box>
     )

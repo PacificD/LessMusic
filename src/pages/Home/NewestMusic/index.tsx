@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-26 19:47:28
- * @LastEditTime: 2022-07-26 21:22:47
+ * @LastEditTime: 2022-07-29 20:42:10
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\pages\Home\NewestMusic\index.tsx
@@ -27,7 +27,6 @@ const NewestMusic: FC = () => {
             </Text>
         )
     }
-
     if (isError || !data) {
         const msg = JSON.stringify(error)
         return <div>fetch error: {msg}</div>
@@ -42,6 +41,7 @@ const NewestMusic: FC = () => {
                 <NewSong
                     artists={song.artists}
                     cover={song.album.picUrl}
+                    duration={song.duration}
                     id={song.id}
                     index={index}
                     key={song.id}

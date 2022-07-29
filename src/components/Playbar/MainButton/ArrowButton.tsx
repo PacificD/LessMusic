@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-25 15:29:06
- * @LastEditTime: 2022-07-25 16:31:36
+ * @LastEditTime: 2022-07-29 21:29:20
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\components\Playbar\MainButton\ArrowButton.tsx
@@ -23,6 +23,7 @@ const directionDegMapper = new Map<Direction, number>([
 
 interface IProps {
     direction: Direction
+    playNextOrPrev: (order?: "next" | "prev") => void
 }
 
 /**
@@ -30,17 +31,22 @@ interface IProps {
  * @param {Direction} direction - 箭头旋转的方向： "up" | "down" | "left" | "right"
  * @return {*}
  */
-const Arrow: FC<IProps> = ({ direction }) => {
+const Arrow: FC<IProps> = ({ direction, playNextOrPrev }) => {
     const arrowRef = useRef<SVGSVGElement | null>(null),
         isHovering = useHover(arrowRef)
 
     const rotateDeg = useMemo(() => directionDegMapper.get(direction), [direction])
+
+    const play = () => {
+        playNextOrPrev(direction === Direction.left ? "prev" : "next")
+    }
 
     return (
         <Circle
             _hover={{ borderColor: "theme.400" }}
             border="1px"
             borderColor="theme.200"
+            onClick={play}
             padding={1}
             shadow={buttonShadow}
             size="32px"

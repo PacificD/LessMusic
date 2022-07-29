@@ -1,13 +1,13 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-28 20:02:40
- * @LastEditTime: 2022-07-28 20:04:04
+ * @LastEditTime: 2022-07-29 15:55:06
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\services\services\usePlayListTrackAllQuery.ts
  */
 
-import { METHODS } from "@/types"
+import { IRes, METHODS } from "@/types"
 import { useQuery } from "@tanstack/react-query"
 import request from "../request"
 
@@ -19,7 +19,7 @@ import request from "../request"
 const usePlaylistTrackAllQuery = (id: number) => {
     const queryKey = ["topSong"]
     const fetchData = () =>
-        request(
+        request<IRes>(
             "/playlist/track/all",
             {
                 id

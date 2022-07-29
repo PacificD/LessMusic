@@ -1,12 +1,12 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-27 17:33:09
- * @LastEditTime: 2022-07-27 17:34:28
+ * @LastEditTime: 2022-07-29 15:53:24
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\services\services\useMusicUrlQuery.ts
  */
-import { METHODS } from "@/types"
+import { METHODS, IRes } from "@/types"
 import { useQuery } from "@tanstack/react-query"
 import request from "../request"
 
@@ -19,7 +19,7 @@ import request from "../request"
 const useMusicUrl = (id: number, enabled = true) => {
     const queryKey = ["song", "url", id]
     const fetchData = () =>
-        request(
+        request<IRes>(
             "/song/url",
             {
                 id

@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-26 20:37:28
- * @LastEditTime: 2022-07-28 12:05:39
+ * @LastEditTime: 2022-07-29 19:51:42
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\pages\Home\NewestMusic\NewSong.tsx
@@ -23,9 +23,10 @@ interface IProps {
     cover: string
     artists: Array<Artist>
     index: number
+    duration: number
 }
 
-const NewSong: FC<IProps> = ({ id, name, cover, artists, index }) => {
+const NewSong: FC<IProps> = ({ id, name, cover, artists, index, duration }) => {
     const bg = useColorModeValue("white", "darkMode"),
         { playMusic } = useCtxValue()
 
@@ -34,7 +35,8 @@ const NewSong: FC<IProps> = ({ id, name, cover, artists, index }) => {
             id,
             name,
             cover,
-            artists
+            artists,
+            duration
         })
     }
     return (

@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-03-30 22:15:53
- * @LastEditTime: 2022-07-28 20:23:07
+ * @LastEditTime: 2022-07-29 19:33:14
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\pages\App.tsx
@@ -12,12 +12,16 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import "@/style/index.css"
 import { Background, GoBack, Navbar, Playbar } from "@/components"
 import { Box } from "@chakra-ui/react"
-import { PlayingMusic } from "@/types"
+import { PlayingMusic, PlaylistAction } from "@/types"
+import initialSong from "./initialSong"
+import { playlistReducer } from "@/reducers"
 
 // TODO: 把CreateContext和Provider抽出一个文件，单独管理全局状态
 export const ctx = createContext<{
     playingMusic: PlayingMusic
-    playMusic: React.Dispatch<PlayingMusic>
+    playlist: Array<PlayingMusic>
+    playlistDispatch: React.Dispatch<PlaylistAction>
+    playMusic: (music: PlayingMusic) => void
 }>({} as any)
 
 /**
@@ -33,26 +37,25 @@ const App: FC = () => {
         }
     })
 
-    const [playingMusic, playMusic] = useReducer(
+    const [playingMusic, setPlayingMusic] = useReducer(
         (playingMusic: PlayingMusic, newMusic: PlayingMusic) => newMusic,
-        {
-            id: 29143665,
-            name: "Walk on By-acro jazz laboratories remix-",
-            cover: "http://p1.music.126.net/OE0BGTVHuxIoZdCr47xO5w==/2923601420161977.jpg?param=130y130",
-            artists: [
-                {
-                    id: 13886,
-                    name: "Acro Jazz Laboratories",
-                    picUrl: "http://p1.music.126.net/sWLvKMtXJLr2i0LLy5njTw==/801543976672489.jpg?param=640y300"
-                }
-            ]
-        } as PlayingMusic
+        initialSong
     )
+
+    const [playlist, playlistDispatch] = useReducer(playlistReducer, [playingMusic])
+
+    const playMusic = (music: PlayingMusic) => {
+        setPlayingMusic(music)
+        playlistDispatch({
+            type: "ADD",
+            payload: music
+        })
+    }
 
     return (
         <QueryClientProvider client={queryClient}>
             <Navbar />
-            <ctx.Provider value={{ playingMusic, playMusic }}>
+            <ctx.Provider value={{ playingMusic, playlist, playlistDispatch, playMusic }}>
                 <Box position="relative" py="70px">
                     <GoBack />
                     <Background />
@@ -63,7 +66,7 @@ const App: FC = () => {
                         []
                     )}
                 </Box>
-                {/* <Playbar /> */}
+                <Playbar />
             </ctx.Provider>
         </QueryClientProvider>
     )

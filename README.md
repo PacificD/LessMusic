@@ -46,7 +46,9 @@
 
 -   navbar 下标
 -   作者 Info 与不盈利提示
--   playing：做 motion design
+-   按钮防抖或节流（或给 document）
+-   playlist scrollbar，全局 scrollbar
+-   封装 loading 动画
 -   骨架屏优化 最新歌曲
 -   用 requestAnimationFrame 封装一个 scrollToTop
 -   recommend 子路由：歌手/歌单/MV

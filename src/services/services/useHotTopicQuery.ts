@@ -1,12 +1,12 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-22 17:16:03
- * @LastEditTime: 2022-07-27 10:49:45
+ * @LastEditTime: 2022-07-29 15:53:02
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\services\services\useHotTopicQuery.ts
  */
-import { METHODS } from "@/types"
+import { METHODS, IRes } from "@/types"
 import { useQuery } from "@tanstack/react-query"
 import request from "../request"
 
@@ -19,7 +19,7 @@ import request from "../request"
 const useHotTopicQuery = (limit = 20, offset = 0) => {
     const queryKey = ["hotTopic"]
     const fetchData = () =>
-        request(
+        request<IRes>(
             "/hot/topic",
             {
                 limit,

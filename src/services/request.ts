@@ -1,21 +1,21 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-22 17:05:20
- * @LastEditTime: 2022-07-22 20:02:51
+ * @LastEditTime: 2022-07-29 15:52:27
  * @LastEditors: Pacific_D
  * @Description:
- * @FilePath: \less-music\src\services\request.ts
+ * @FilePath: \lessMusic\src\services\request.ts
  */
 import createAxiosInstance from "./axios"
 import { IRes, METHODS } from "@/types"
 import { AxiosResponse } from "axios"
 import { qs } from "@/utils"
 
-const request = (
+function request<T>(
     url: string,
     params: object,
     method: METHODS = METHODS.GET
-): Promise<AxiosResponse<IRes>> => {
+): Promise<AxiosResponse<T>> {
     const axiosInstance = createAxiosInstance()
     switch (method) {
         case METHODS.GET:

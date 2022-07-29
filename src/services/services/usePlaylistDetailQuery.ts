@@ -1,12 +1,12 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-22 20:08:10
- * @LastEditTime: 2022-07-27 10:50:21
+ * @LastEditTime: 2022-07-29 15:54:59
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\services\services\usePlaylistDetailQuery.ts
  */
-import { METHODS } from "@/types"
+import { IRes, METHODS } from "@/types"
 import { useQuery } from "@tanstack/react-query"
 import request from "../request"
 
@@ -19,7 +19,7 @@ import request from "../request"
 const usePlaylistDetailQuery = (id: number, enabled = false) => {
     const queryKey = ["playlist", "detail", id]
     const fetchData = () =>
-        request(
+        request<IRes>(
             "/playlist/detail",
             {
                 id,

@@ -1,12 +1,12 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-26 20:00:11
- * @LastEditTime: 2022-07-27 10:50:27
+ * @LastEditTime: 2022-07-29 15:55:20
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\services\services\useTopSongQuery.ts
  */
-import { METHODS } from "@/types"
+import { IRes, METHODS } from "@/types"
 import { useQuery } from "@tanstack/react-query"
 import request from "../request"
 
@@ -18,7 +18,7 @@ import request from "../request"
 const useTopSongQuery = (type = 96) => {
     const queryKey = ["topSong"]
     const fetchData = () =>
-        request(
+        request<IRes>(
             "/top/song",
             {
                 type

@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-19 10:16:22
- * @LastEditTime: 2022-07-26 17:46:13
+ * @LastEditTime: 2022-07-29 11:32:32
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\router\config\index.tsx
@@ -63,7 +63,7 @@ const config = [
     },
     // 搜索
     {
-        path: "/singer/:keyword",
+        path: "/search/:keyword",
         element: <Search />
     },
     // 歌手详情

@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-26 20:45:15
- * @LastEditTime: 2022-07-26 20:56:06
+ * @LastEditTime: 2022-07-29 19:52:05
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\types\song.ts
@@ -14,4 +14,5 @@ export type Song = {
     mp3Url: string
     name: string
     album: Album
+    duration: number
 }
