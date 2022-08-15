@@ -1,7 +1,7 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-23 15:58:35
- * @LastEditTime: 2022-07-29 22:20:41
+ * @LastEditTime: 2022-08-15 17:10:47
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\components\Playbar\index.tsx
@@ -14,8 +14,9 @@ import SongInfo from "./SongInfo"
 import RightSection from "./RightSection"
 import { useMusicUrlQuery } from "@/services"
 import { IRes, PlayingMusic } from "@/types"
-import { formatPlayTime } from "@/utils"
+import { calculateDuration, formatPlayTime } from "@/utils"
 import { useCtxValue } from "@/hooks"
+import { useAppSelector } from "@/store"
 
 /**
  * @description: 底部音乐控件：播放进度，音量，呼出播放列表等
@@ -25,24 +26,38 @@ const Playbar: FC = () => {
     const bg = useColorModeValue("white", "darkMode"),
         [currentTime, setCurrentTime] = useState(0),
         [mode, setMode] = useState<number>(0),
-        { playlist, playMusic, playingMusic } = useCtxValue(),
-        toast = useToast()
+        playingMusic = useAppSelector(state => state.playingMusic),
+        playlist = useAppSelector(state => state.playlist),
+        { playMusic } = useCtxValue(),
+        toast = useToast(),
+        initial = useRef(true)
 
     const audioRef = useRef<HTMLAudioElement>(null),
         [isPlaying, setIsPlaying] = useState(false)
 
     const { data, isLoading, isError, error } = useMusicUrlQuery(playingMusic.id)
 
-    const musicSrc: string = useMemo(
-        () =>
-            isLoading || !data || (data as IRes).code !== 200
-                ? "./mp3"
-                : (data as IRes).data[0].url,
+    const musicSrc: string = useMemo(() => {
+        if (!isLoading) {
+            if (!data || (data as IRes).code !== 200) {
+                toast({
+                    title: "网络出错",
+                    description: (data as IRes)?.message
+                        ? (data as IRes)?.message
+                        : "请检查网络或联系管理员",
+                    status: "error",
+                    duration: 12000,
+                    position: "top",
+                    isClosable: true
+                })
+                return "./music.mp3"
+            } else {
+                return (data as IRes).data[0].url
+            }
+        }
+    }, [data, isLoading, toast])
 
-        [data, isLoading]
-    )
-
-    const duration: number = Math.round(audioRef.current?.duration ?? 0)
+    const duration: number = Math.round(audioRef.current?.duration ? audioRef.current?.duration : 0)
 
     /**
      * @description: 播放时间更新事件
@@ -58,6 +73,10 @@ const Playbar: FC = () => {
      * @return {*}
      */
     const mediaOnLoaded = () => {
+        if (initial.current) {
+            initial.current = false
+            return
+        }
         audioRef.current!.play()
         setIsPlaying(true)
     }
@@ -120,7 +139,7 @@ const Playbar: FC = () => {
 
     if (isError) {
         toast({
-            title: "网络出错" + error,
+            title: "网络出错",
             description: "请检查网络或联系管理员",
             status: "error",
             duration: 6000,
@@ -169,7 +188,7 @@ const Playbar: FC = () => {
                     togglePlaying={togglePlaying}
                 />
                 <Text left="60%" position="absolute">
-                    {formatPlayTime(currentTime)} / {formatPlayTime(playingMusic.duration)}
+                    {formatPlayTime(currentTime)} / {calculateDuration(playingMusic.duration)}
                 </Text>
                 {useMemo(
                     () => (

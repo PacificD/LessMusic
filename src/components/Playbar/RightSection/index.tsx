@@ -1,13 +1,13 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-25 16:26:13
- * @LastEditTime: 2022-07-29 21:24:55
+ * @LastEditTime: 2022-08-15 16:58:20
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\components\Playbar\RightSection\index.tsx
  */
 
-import React, { FC, useState, useMemo } from "react"
+import React, { FC, useState } from "react"
 import VolumeController from "../VolumeController"
 import { RiPlayListFill } from "react-icons/ri"
 import { BiSortDown } from "react-icons/bi"
@@ -15,9 +15,9 @@ import { ImLoop2 } from "react-icons/im"
 import { FaRandom } from "react-icons/fa"
 import { chakra, Stack, Box, Text, Flex, Tooltip, useColorModeValue } from "@chakra-ui/react"
 import { AnimatePresence, motion } from "framer-motion"
-import { useCtxValue } from "@/hooks"
 import PlaylistItem from "./PlaylistItem"
 import { BsFillTrashFill } from "react-icons/bs"
+import { clearPlaylist, useAppDispatch, useAppSelector } from "@/store"
 
 const animation = {
     initial: {
@@ -91,7 +91,9 @@ const RightSection: FC<IProps> = ({ mode, setMode, audioRef }) => {
     const [isPlayList, setIsPlayList] = useState(false),
         modeInfo = modeMapper.get(mode),
         bg = useColorModeValue("white", "darkMode"),
-        { playlist, playlistDispatch, playingMusic } = useCtxValue()
+        playingMusic = useAppSelector(state => state.playingMusic),
+        playlist = useAppSelector(state => state.playlist),
+        dispatch = useAppDispatch()
 
     /**
      * @description: 切换播放模式
@@ -107,9 +109,7 @@ const RightSection: FC<IProps> = ({ mode, setMode, audioRef }) => {
      */
     const deleteAll = (e: React.MouseEvent) => {
         e.stopPropagation()
-        playlistDispatch({
-            type: "CLEAR"
-        })
+        dispatch(clearPlaylist())
     }
 
     return (

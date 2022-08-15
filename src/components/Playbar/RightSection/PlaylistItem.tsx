@@ -1,12 +1,13 @@
 /*
  * @Author: Pacific_D
  * @Date: 2022-07-29 19:37:32
- * @LastEditTime: 2022-07-29 20:33:56
+ * @LastEditTime: 2022-08-15 16:59:52
  * @LastEditors: Pacific_D
  * @Description:
  * @FilePath: \lessMusic\src\components\Playbar\RightSection\PlaylistItem.tsx
  */
 import { useCtxValue } from "@/hooks"
+import { deletePlaylist, useAppDispatch } from "@/store"
 import { PlayingMusic } from "@/types"
 import { calculateDuration } from "@/utils"
 import { chakra, Flex, Text, useColorModeValue } from "@chakra-ui/react"
@@ -22,7 +23,8 @@ interface IProps {
 }
 
 const PlaylistItem: FC<IProps> = ({ index, music, isPlaying }) => {
-    const { playMusic, playlistDispatch } = useCtxValue(),
+    const { playMusic } = useCtxValue(),
+        dispatch = useAppDispatch(),
         bg = useColorModeValue("gray.200", "gray.700")
     const play = () => {
         playMusic(music)
@@ -30,10 +32,7 @@ const PlaylistItem: FC<IProps> = ({ index, music, isPlaying }) => {
 
     const deleteFromPlaylist = (e: React.MouseEvent) => {
         e.stopPropagation()
-        playlistDispatch({
-            type: "DELETE",
-            payload: music.id
-        })
+        dispatch(deletePlaylist(music.id))
     }
 
     return (
